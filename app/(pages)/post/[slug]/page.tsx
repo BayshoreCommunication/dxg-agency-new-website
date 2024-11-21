@@ -240,8 +240,8 @@ import parse from "html-react-parser";
 import Head from "next/head"; // Import Head for SEO
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import blogsData from "@/lib/GetAllBlogPost";
 import { set } from "date-fns";
+import { Loader } from "lucide-react";
 
 // TypeScript Types
 interface BlogPost {
@@ -269,13 +269,6 @@ const slugify = (text: string): string =>
     .replace(/-+$/, ""); // Trim - from end of text
 
 // Fetch post by slug
-const getPostBySlug = async (slug: string): Promise<BlogPost | null> => {
-  const blogsData = GetAllBlogPost;
-  const post = blogsData?.data?.find(
-    (post: BlogPost) => slugify(post.slug) === slug
-  );
-  return post || null;
-};
 
 // CSS string for styling
 // const css = `
@@ -286,12 +279,23 @@ const getPostBySlug = async (slug: string): Promise<BlogPost | null> => {
 
 export default function PostPage() {
   const { slug } = useParams();
-  console.log(slug);
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [blogData, setBlogData] = useState<BlogPost[] | null>(null);
-  setBlogData(blogsData?.data);
-  setPost(getPostBySlug(slug));
 
+  // const [post, setPost] = useState([] as any);
+  //const [blogData, setBlogData] = useState<BlogPost[] | null>(null);
+  const blogsData = GetAllBlogPost;
+
+  const post = blogsData?.data?.find(
+    (post: BlogPost) => slugify(post.slug) === slug
+  );
+
+  // const getPostBySlug = async (slug) => {
+  //   const post = blogsData?.data?.find(
+  //     (post: BlogPost) => slugify(post.slug) === slug
+  //   );
+  //   return post || null;
+  // };
+  //setBlogData(blogsData?.data);
+  // setPost(getPostBySlug(slug));
   // Fetch all blog posts once
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -403,7 +407,21 @@ export default function PostPage() {
               variants={slideIn("up", "tween", 0.2, 1)}
               className="w-full py-2 lg:w-9/12"
             >
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense
+                fallback={
+                  <div className="bg-black w-full h-full">
+                    <div className="loading-gif">
+                      <Image
+                        src="/loader.gif"
+                        height={300}
+                        width={300}
+                        alt="loader"
+                        fill
+                      />
+                    </div>
+                  </div>
+                }
+              >
                 <BlogBigImageCard {...post} />
               </Suspense>
             </MotionDiv>
@@ -422,7 +440,12 @@ export default function PostPage() {
                   Recent Posts
                 </h2>
                 <section className="w-full">
-                  <BlogWideCard />
+                  <BlogWideCard
+                    className={
+                      "flex flex-col flex-wrap justify-between gap-5 w-full"
+                    }
+                    cardClassName={"w-full"}
+                  />
                 </section>
               </div>
             </div>

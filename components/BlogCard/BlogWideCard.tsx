@@ -13,7 +13,13 @@ import Link from "next/link";
 //   body: string;
 // }
 
-export const BlogWideCard = () => {
+export const BlogWideCard = ({
+  className,
+  cardClassName,
+}: {
+  className?: string;
+  cardClassName?: string;
+}) => {
   // const time = formatTimestamp(createdAt);
   const blogsData = GetAllBlogPost;
 
@@ -28,7 +34,7 @@ export const BlogWideCard = () => {
     return formattedDate;
   };
   return (
-    <div className="flex flex-col flex-wrap justify-between gap-5 lg:flex-row">
+    <div className={"" + className}>
       {blogsData?.data
         ?.filter((blog: any) => blog.published === true)
         ?.map((item: any, index: number) => {
@@ -37,7 +43,7 @@ export const BlogWideCard = () => {
               href={`/post/${item.slug}`}
               key={item._id}
               // style={{ maxWidth: '100%' }}
-              className="w-full lg:w-[45%]"
+              className={"w-full lg:w-[45%]" + cardClassName}
             >
               <MotionDiv
                 variants={fadeIn("up", "tween", index * 0.2, 1)}

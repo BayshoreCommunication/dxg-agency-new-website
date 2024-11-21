@@ -79,7 +79,7 @@ export const RecentBlogSection = () => {
                   })}
               </div> */}
 
-              <BlogWideCard />
+              <BlogWideCard className="flex flex-row flex-wrap justify-between gap-5 " />
             </div>
           </MotionDiv>
         </div>
