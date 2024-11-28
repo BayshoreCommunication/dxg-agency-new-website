@@ -1,26 +1,32 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "../ui/button";
-import { formatTimestamp } from "@/lib/utils";
+// import { Button } from "../ui/button";
+// import { formatTimestamp } from "@/lib/utils";
 import LazyDescription from "./LazyDescription.client";
+import image from "@/public/bgFooter.png";
+import parse from "html-react-parser";
 
 interface BlogBigImageCardProps {
-  _id: number;
-  createdAt: number;
+  id: number;
+  date: number;
   title: string;
-  featuredImage: string;
+  image: string;
+  description: string;
+  tag: string[];
   body: string;
 }
 
 export const BlogBigImageCard: React.FC<BlogBigImageCardProps> = ({
-  _id,
-  createdAt,
+  id,
+  date,
   title,
+  image,
+  description,
+  tag,
   body,
-  featuredImage,
 }) => {
-  const postDate = (date: any) => {
-    const formattedDate = new Date(date).toLocaleDateString("en-US", {
+  const postDate = (date: string) => {
+    const formattedDate: string = new Date(date).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -33,7 +39,7 @@ export const BlogBigImageCard: React.FC<BlogBigImageCardProps> = ({
       <div className="imageEntryAnimation relative h-[220px] w-full bg-red-200 md:h-[445px]">
         {/* Added animation class here */}
         <Image
-          src={`${featuredImage?.image?.url}`}
+          src={`${image}`}
           alt={title}
           fill
           style={{
@@ -42,9 +48,11 @@ export const BlogBigImageCard: React.FC<BlogBigImageCardProps> = ({
           }}
         />
       </div>
-      <p className="text-light mt-3">{postDate(createdAt)}</p>
+      <p className="text-light mt-3">{date}</p>
       <h4 className="text mb-3 text-xl font-bold text-brand">{title}</h4>
-      <LazyDescription description={body} />
+      {/* <div key={index} className="lazyTextElement">
+        {parse(htmlElement.outerHTML)}
+      </div> */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import NewsLetter from "@/components/NewsLetter";
-import { BannerSection, OurBlogSection } from "@/components/Sections";
+import { BannerSection } from "@/components/Sections";
 import Testimonial from "@/components/Testimonial";
-import Overview from "@/components/home/Overview";
+//import Overview from "@/components/home/Overview";
 import Services from "@/components/home/Services";
 import WeAre from "@/components/home/WeAre";
 import WeSupport from "@/components/home/WeSupport";

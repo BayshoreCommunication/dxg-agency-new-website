@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/motion";
 import { MotionDiv } from "../Motion";
 import { Icons } from "../Icons";
-import { Button } from "../ui/button";
-import { P } from "../Typography";
-import Link from "next/link";
-import { zoomIn } from "@/lib/motion";
+// import { Button } from "../ui/button";
+// import { P } from "../Typography";
+// import Link from "next/link";
+// import { zoomIn } from "@/lib/motion";
 
 interface SupportCardProps {
   id: number;
@@ -26,12 +26,12 @@ const SupportCardMobile = ({
   title,
   description,
   index,
-  active,
+  // active,
   handleCardHover,
 }: SupportCardProps) => (
   <MotionDiv
     variants={fadeIn("right", "tween", index * 0.4, 0.75)}
-    className={`duration-[0.7]  ease-out-flex relative mt-5 flex h-[500px] cursor-pointer items-center justify-center transition-[flex]`}
+    className={`duration-700  ease-out-flex relative mt-5 flex h-[500px] cursor-pointer items-center justify-center transition-[flex]`}
     style={{
       backgroundImage: `linear-gradient(rgba(45, 198, 245, 0.6), rgba(45, 198, 245, 0)), url(${imgUrl})`,
       transition: "0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95)",

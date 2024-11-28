@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
-import { Icons } from "../Icons";
-import { Button } from "../ui/button";
-import { P } from "../Typography";
+// import Link from "next/link";
+// import { useState } from "react";
+// import { Icons } from "../Icons";
+// import { Button } from "../ui/button";
+// import { P } from "../Typography";
 import { MotionDiv } from "../Motion";
 import { fadeIn } from "@/lib/motion";
 import Image from "next/image";
@@ -30,7 +30,7 @@ export default function SupportCardTwo({
     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
     className={`relative ${
       active === id ? "flex-[10] lg:flex-[3.5]" : "flex-[2] lg:flex-[0.5]"
-    } duration-[0.7] ease-out-flex flex h-[700px] min-w-[170px] cursor-pointer items-center justify-center transition-[flex]`}
+    } duration-700 ease-out-flex flex h-[700px] min-w-[170px] cursor-pointer items-center justify-center transition-[flex]`}
     onClick={() => handleClick(id)}
   >
     <Image

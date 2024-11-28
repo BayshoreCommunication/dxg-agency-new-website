@@ -1,16 +1,16 @@
-import { ReactElement } from 'react';
-import MaxWidthWrapper from '../MaxWidthWrapper';
-import { HeaderTextStyle } from '../TextStyle';
-import { Button } from '../ui/button';
-import { MotionDiv } from '../Motion';
-import { fadeIn, staggerContainer } from '@/lib/motion';
-import Link from 'next/link';
+import { ReactElement } from "react";
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import { HeaderTextStyle } from "../TextStyle";
+//import { Button } from '../ui/button';
+import { MotionDiv } from "../Motion";
+import { fadeIn, staggerContainer } from "@/lib/motion";
+//import Link from 'next/link';
 type HeaderTextProps = {
   preText?: string;
   coloredText: string;
   postText?: string;
-  variant?: 'section' | 'caps';
-  texAlign?: 'text-center' | 'text-right' | 'text-left';
+  variant?: "section" | "caps";
+  texAlign?: "text-center" | "text-right" | "text-left";
 };
 interface BreadCrumbProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
   titleProps: HeaderTextProps;
@@ -20,32 +20,32 @@ interface BreadCrumbProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
   bgImage: string; // Add this line
 }
 export const BreadCrumbWithoutButton: React.FC<BreadCrumbProps> = ({
-  buttonTitle,
-  description,
+  // buttonTitle,
+  // description,
   titleProps,
-  customDescription,
+  // customDescription,
   bgImage, // Add this line
   ...rest
 }) => {
   return (
     <div
       style={{ backgroundImage: `url(${bgImage})` }} // Add this line
-      className='relative min-h-[300px]  bg-cover bg-no-repeat'
+      className="relative min-h-[300px]  bg-cover bg-no-repeat"
       {...rest}
     >
-      <div className=' bg-differentBackground'>
+      <div className=" bg-differentBackground">
         <MaxWidthWrapper>
-          <div className=''>
+          <div className="">
             <MotionDiv
               variants={staggerContainer(0.2, 0.1)}
-              initial='hidden'
-              whileInView='show'
+              initial="hidden"
+              whileInView="show"
               viewport={{ once: false, amount: 0.25 }}
-              className='flex min-h-[300px] items-center justify-center'
+              className="flex min-h-[300px] items-center justify-center"
             >
               <MotionDiv
-                variants={fadeIn('right', 'tween', 0.2, 1)}
-                className=''
+                variants={fadeIn("right", "tween", 0.2, 1)}
+                className=""
               >
                 <HeaderTextStyle {...titleProps} />
                 {/* <Button

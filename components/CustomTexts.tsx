@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { textContainer, textVariant2 } from '@/lib/motion';
-import { motion } from 'framer-motion';
-import { MotionDiv, MotionH1, MotionH2 } from './Motion';
+import { textContainer, textVariant2 } from "@/lib/motion";
+import { motion } from "framer-motion";
+import { MotionH2 } from "./Motion";
 
 interface CustomTextProps {
   preText: string;
@@ -21,16 +21,16 @@ export const TypingText = ({
   >
     {Array.from(preText).map((letter, index) => (
       <motion.span variants={textVariant2} key={index}>
-        {letter === ' ' ? '\u00A0' : letter}
+        {letter === " " ? "\u00A0" : letter}
       </motion.span>
-    ))}{' '}
+    ))}{" "}
     {Array.from(coloredText).map((letter, index) => (
       <motion.span
-        className=' outline-with-shaddow uppercase '
+        className=" outline-with-shaddow uppercase "
         variants={textVariant2}
         key={index}
       >
-        {letter === ' ' ? '\u00A0' : letter}
+        {letter === " " ? "\u00A0" : letter}
       </motion.span>
     ))}
   </MotionH2>

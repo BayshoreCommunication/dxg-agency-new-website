@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import emailjs from "emailjs";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
-  handleEventFormSubmit,
+  // handleEventFormSubmit,
   handleProposalFormSubmit,
 } from "@/actions/actions";
 import { useRouter } from "next/navigation";
@@ -48,7 +48,7 @@ const YOUR_TEMPLATE_ID = "template_3aabfhp";
 const YOUR_PUBLIC_ID = "AqGG9lPkRTJhUceLQ";
 
 export const EventsFormsStepTwo: React.FC<MyComponentProps> = (props) => {
-  const router = useRouter();
+  // const router = useRouter();
   const [openPopup, setOpenPopup] = useState(false);
   const { setFormStep, orderCustomrDlts, totalPriced } = props;
   const [isLoading, setIsLoading] = useState(false);
@@ -195,7 +195,7 @@ export const EventsFormsStepTwo: React.FC<MyComponentProps> = (props) => {
     </table>`;
     });
   }
-  var templateParams = {
+  const templateParams = {
     client_name: `${orderCustomrDlts.firstName} ${orderCustomrDlts.lastName}`,
     from_name: `${orderCustomrDlts.firstName} ${orderCustomrDlts.lastName}`,
     client_phone: orderCustomrDlts.phone,

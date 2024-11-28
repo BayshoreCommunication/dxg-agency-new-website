@@ -7,7 +7,7 @@ import logo from "@/public/dxgLogo.svg";
 import { Icons } from "./Icons";
 import { Button } from "./ui/button";
 import { MotionDiv } from "./Motion";
-import { fadeIn, staggerContainer, zoomIn } from "@/lib/motion";
+import { fadeIn, zoomIn } from "@/lib/motion";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 
 export default function Footer() {

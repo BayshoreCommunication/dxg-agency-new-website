@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import parse from "html-react-parser";
@@ -5,7 +6,8 @@ import GetAllBlogPost from "@/lib/GetAllBlogPost";
 import { MotionDiv } from "../Motion";
 import { fadeIn } from "@/lib/motion";
 import Link from "next/link";
-
+import { Suspense, useEffect, useMemo, useState } from "react";
+import React from "react";
 // interface BlogBigImageCardProps {
 //   createdAt: number;
 //   title: string;
@@ -13,17 +15,25 @@ import Link from "next/link";
 //   body: string;
 // }
 
-export const BlogWideCard = ({
+const BlogWideCard = ({
   className,
-  cardClassName,
+  linkClassName,
 }: {
   className?: string;
-  cardClassName?: string;
+  linkClassName?: string;
 }) => {
   // const time = formatTimestamp(createdAt);
-  const blogsData = GetAllBlogPost;
-
-  console.log(blogsData.data.length);
+  const [blogsData, setBlogsData] = useState([]);
+  useEffect(() => {
+    fetch("https://backend-dxgwebsite.vercel.app/site/blog", {
+      cache: "force-cache",
+      next: { revalidate: 3600 },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setBlogsData(data.data);
+      });
+  }, []);
 
   const postDate = (date: any) => {
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -33,23 +43,21 @@ export const BlogWideCard = ({
     });
     return formattedDate;
   };
+
   return (
-    <div className={"" + className}>
-      {blogsData?.data
+    <div className={" " + className}>
+      {blogsData
         ?.filter((blog: any) => blog.published === true)
-        ?.map((item: any, index: number) => {
+        ?.map((item: any) => {
           return (
             <Link
               href={`/post/${item.slug}`}
               key={item._id}
               // style={{ maxWidth: '100%' }}
-              className={"w-full lg:w-[45%]" + cardClassName}
+              className={"w-full " + linkClassName}
             >
-              <MotionDiv
-                variants={fadeIn("up", "tween", index * 0.2, 1)}
-                className="w-full cursor-pointer"
-              >
-                <div className="flex w-full items-stretch gap-4 text-white">
+              <div className="w-full cursor-pointer">
+                <div className="flex w-full gap-4 text-white">
                   {/* Adjusted for equal height */}
                   <div
                     className="relative flex-shrink-0"
@@ -60,9 +68,11 @@ export const BlogWideCard = ({
                       src={`${item.featuredImage?.image?.url}`}
                       alt={"featuredImage.altText"}
                       fill
-                      content="cover"
+                      objectPosition="center"
                       className="absolute left-0 top-0"
                       loading="lazy"
+                      blurDataURL={`${item.featuredImage?.image?.url}`}
+                      placeholder="blur"
                     />
                   </div>
                   <div className="flex flex-grow flex-col justify-center">
@@ -84,11 +94,12 @@ export const BlogWideCard = ({
                     </div>
                   </div>
                 </div>
-              </MotionDiv>
+              </div>
             </Link>
           );
         })}
     </div>
-    // <div> hi</div>
   );
 };
+
+export default BlogWideCard;

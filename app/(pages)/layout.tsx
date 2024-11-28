@@ -9,6 +9,11 @@ import { SITECONFIG } from "@/config/site";
 
 import "./globals.css";
 
+type Props = {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
 export const metadata: Metadata = {
   title: SITECONFIG.siteMetadata.title,
   description: SITECONFIG.siteMetadata.description,

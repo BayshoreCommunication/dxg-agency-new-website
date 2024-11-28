@@ -1,14 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 import { fadeIn } from "@/lib/motion";
 import { MotionDiv } from "../Motion";
 import { Icons } from "../Icons";
-import { Button } from "../ui/button";
-import { P } from "../Typography";
-import Link from "next/link";
-import { zoomIn } from "@/lib/motion";
+// import { Button } from "../ui/button";
+// import { P } from "../Typography";
+// import Link from "next/link";
+// import { zoomIn } from "@/lib/motion";
 import "@/style/custom.css";
 const ExploreCard = ({
   id,
@@ -23,7 +23,7 @@ const ExploreCard = ({
     variants={fadeIn("right", "tween", index * 0.4, 0.75)}
     className={`relative ${
       active === id ? "flex-[10] lg:flex-[3.6]" : "flex-[2] lg:flex-[0.4]"
-    } duration-[0.7] ease-out-flex flex h-[500px] min-w-[100px] cursor-pointer items-center justify-center transition-[flex]`}
+    } duration-700 ease-out-flex flex h-[500px] min-w-[100px] cursor-pointer items-center justify-center transition-[flex]`}
     style={{
       backgroundImage: `linear-gradient(rgba(45, 198, 245, 0.6), rgba(45, 198, 245, 0)), url(${imgUrl})`,
       transition: "0.9s cubic-bezier(0.05, 0.61, 0.41, 0.95)",

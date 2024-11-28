@@ -14,7 +14,7 @@ export default {
         header: '#2C2C2C',
         differentBackground: 'rgba(73, 71, 72, 0.28)',
         dot: 'rgba(45, 198, 245, 0.5)',
-        border: 'hsl(var(--border))',
+        
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
   			background: 'hsl(var(--background))',
@@ -48,8 +48,7 @@ export default {
   				foreground: 'hsl(var(--destructive-foreground))'
   			},
   			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
+  			
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',

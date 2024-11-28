@@ -1,8 +1,8 @@
-'use client';
-import React, { useEffect, useRef } from 'react';
-import { motion, useInView, useAnimation } from 'framer-motion';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+"use client";
+import React, { useEffect } from "react";
+//import { motion, useInView, useAnimation } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface Props {
   children: JSX.Element;

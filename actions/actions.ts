@@ -70,7 +70,7 @@ const handleEventFormSubmit = async (formData: FormData) => {
     }
 
     const result = await response.text();
-    console.log('result', result);
+    //console.log('result', result);
 
     return 'success';
   } catch (error) {

@@ -1,12 +1,12 @@
 // import Footer from '@/components/Footer';
 // import Navbar from '@/components/Navbar';
-import TailwindIndicator from '@/components/TailwindIndicator';
-import { cn } from '@/lib/utils';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { SITECONFIG } from '@/config/site';
-const inter = Inter({ subsets: ['latin'] });
+//import TailwindIndicator from '@/components/TailwindIndicator';
+import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { SITECONFIG } from "@/config/site";
+const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
 //   title: SITECONFIG.siteMetadata.title,
@@ -24,15 +24,15 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: SITECONFIG.siteMetadata.title,
   description: SITECONFIG.siteMetadata.description,
-  metadataBase: new URL('https://www.dxg.agency'),
+  metadataBase: new URL("https://www.dxg.agency"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
     languages: {
-      'en-US': '/en-USA',
+      "en-US": "/en-USA",
     },
   },
   openGraph: {
-    images: '/opengraph-image.jpg',
+    images: "/opengraph-image.jpg",
   },
 };
 
@@ -42,16 +42,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='h-full scroll-smooth bg-black'>
+    <html lang="en" className="h-full scroll-smooth bg-black">
       <body
         className={cn(
-          'relative h-full overflow-x-hidden font-sans antialiased',
+          "relative h-full overflow-x-hidden font-sans antialiased",
           inter.className
         )}
       >
         {/* <Navbar /> */}
-        <main className=''>
-          <div className=''>{children}</div>
+        <main className="">
+          <div className="">{children}</div>
         </main>
         {/* <Footer /> */}
         {/* <TailwindIndicator /> */}

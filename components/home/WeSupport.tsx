@@ -1,32 +1,32 @@
-'use client';
+"use client";
 
-import SupportCard from '../Cards/SupportCard';
-import MaxWidthWrapper from '../MaxWidthWrapper';
-import { H1, P, Paragraph, Title } from '../Typography';
-import { Button } from '../ui/button';
-import Link from 'next/link';
-import { BottomToTop } from '../Animation';
-import { exploreDXG, exploreWorlds } from '@/config/data';
-import SupportCardTwo from '../Cards/SupportCardTwo';
-import { useState } from 'react';
-import { MotionDiv } from '../Motion';
-import { staggerContainer } from '@/lib/motion';
-import ExploreCard from '../Cards/ExploreCard';
-import SupportCardMobile from '../Cards/SupportCardMobile';
+// import SupportCard from '../Cards/SupportCard';
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import { Paragraph, Title } from "../Typography";
+// import { Button } from '../ui/button';
+// import Link from 'next/link';
+// import { BottomToTop } from '../Animation';
+import { exploreWorlds } from "@/config/data";
+// import SupportCardTwo from '../Cards/SupportCardTwo';
+import { useState } from "react";
+import { MotionDiv } from "../Motion";
+import { staggerContainer } from "@/lib/motion";
+import ExploreCard from "../Cards/ExploreCard";
+import SupportCardMobile from "../Cards/SupportCardMobile";
 const infos = {
-  title: 'Who We Support - 3 P’s of Partnership',
+  title: "Who We Support - 3 P’s of Partnership",
   description: `Our core teams have an average of 15+ years of experience with backgrounds in live events, virtual and hybrid corporate events, broadcast, and entertainment & performances. With this experience, we are a sought-after resource and view ourselves as the missing piece to your puzzle. At DXG Agency, we support`,
 };
 
 export default function WeSupport() {
   const [active, setActive] = useState(0);
   return (
-    <div className='mb-10 mt-4 bg-black md:mb-28'>
+    <div className="mb-10 mt-4 bg-black md:mb-28">
       <MaxWidthWrapper>
-        <div className='flex flex-col  items-end py-5 md:py-10 '>
-          <div className=' md:max-w-2xl'>
+        <div className="flex flex-col  items-end py-5 md:py-10 ">
+          <div className=" md:max-w-2xl">
             <Title text={infos.title} />
-            <Paragraph text={infos.description} className='text-left' />
+            <Paragraph text={infos.description} className="text-left" />
           </div>
 
           {/* <BottomToTop>
@@ -39,8 +39,8 @@ export default function WeSupport() {
             </Button>
           </BottomToTop> */}
         </div>
-        <div className='md:hidden'>
-          <div className='skew-y-6'>
+        <div className="md:hidden">
+          <div className="skew-y-6">
             {exploreWorlds.map((world, index) => (
               <SupportCardMobile
                 key={world.id}
@@ -57,10 +57,10 @@ export default function WeSupport() {
         >
           <MotionDiv
             variants={staggerContainer(0.2, 0.1)}
-            initial='hidden'
-            whileInView='show'
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            className=' flex   flex-col gap-6 lg:flex-row'
+            className=" flex   flex-col gap-6 lg:flex-row"
           >
             {exploreWorlds.map((world, index) => (
               <ExploreCard

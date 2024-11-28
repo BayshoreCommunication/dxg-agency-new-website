@@ -1,7 +1,7 @@
-'use client';
-import { useState, useEffect } from 'react';
-import '@/style/custom.css';
-import { cn } from '@/lib/utils';
+"use client";
+import { useState, useEffect } from "react";
+import "@/style/custom.css";
+import { cn } from "@/lib/utils";
 
 interface Number {
   value: number;
@@ -26,9 +26,9 @@ const NumberAnimation = ({
 
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
-  }, [value]);
+  }, [value, duration, incrementPlus]);
 
-  return <div className={cn('font-bold text-brand', className)}>{count}+</div>;
+  return <div className={cn("font-bold text-brand", className)}>{count}+</div>;
 };
 
 export default NumberAnimation;
