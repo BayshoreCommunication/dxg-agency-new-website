@@ -24,12 +24,7 @@ export default function Footer() {
         <MaxWidthWrapper>
           {/* <div className='mx-auto w-full px-2.5 md:px-72 py-8'> */}
           <div className="py-8">
-            <MotionDiv
-              // variants={staggerContainer(0.2, 0.1)}
-              variants={fadeIn("up", "tween", 0.3, 0.5)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.25 }}
+            <div 
               className="flex flex-col"
             >
               <div className="flex flex-col md:flex-row md:justify-between">
@@ -46,10 +41,8 @@ export default function Footer() {
                     <div className="my-4">
                       {/* address */}
 
-                      <MotionDiv
-                        variants={fadeIn("up", "tween", 0.1, 0.5)}
-                        className="flex "
-                      >
+                      
+                      <div className="flex">
                         <div className="w-20 flex-[.2] md:flex-[.1]">
                           {
                             <Icons.location
@@ -60,10 +53,8 @@ export default function Footer() {
                         </div>
                         <p className="flex-[.8] text-sm text-white md:flex-[.9] ml-[-14px] md:ml-[-4px]">
                           {SITECONFIG.address}
-                        </p>
-                      </MotionDiv>
-                      {/* phone */}
-                      <MotionDiv variants={fadeIn("up", "tween", 0.1, 0.5)}>
+                        </p></div>
+                      
                         <Link
                           href={`tel:+${SITECONFIG.phone}`}
                           className="my-2 flex"
@@ -80,9 +71,9 @@ export default function Footer() {
                             {SITECONFIG.phone}
                           </p>
                         </Link>
-                      </MotionDiv>
+                      
                       {/* email */}
-                      <MotionDiv variants={fadeIn("up", "tween", 0.1, 0.5)}>
+                      
                         <Link
                           href={`mailto:${SITECONFIG.email}`}
                           className=" flex items-center"
@@ -99,15 +90,15 @@ export default function Footer() {
                             {SITECONFIG.email}
                           </p>
                         </Link>
-                      </MotionDiv>
+                      
                     </div>
                     {/* icons */}
-                    <MotionDiv
-                      variants={fadeIn("up", "tween", 0.1, 0.5)}
+                    <div
+                      
                       className=" flex gap-4"
                     >
-                      <MotionDiv variants={zoomIn(0.1, 0.5)}>
-                        <Link
+                      
+                      <div><Link
                           href="https://www.facebook.com/dxgagcy/"
                           target="_blank"
                         >
@@ -115,10 +106,10 @@ export default function Footer() {
                             fill="current"
                             className="icon-hover h-6 w-6 rounded text-brand"
                           />
-                        </Link>
-                      </MotionDiv>
-                      <MotionDiv variants={zoomIn(0.2, 0.5)}>
-                        <Link
+                        </Link></div>
+                        
+                      
+                      <div><Link
                           href="https://linkedin.com/company/dxg-agency"
                           target="_blank"
                         >
@@ -126,10 +117,10 @@ export default function Footer() {
                             fill="current"
                             className="icon-hover h-6 w-6 rounded text-brand"
                           />
-                        </Link>
-                      </MotionDiv>
-                      <MotionDiv variants={zoomIn(0.3, 0.5)}>
-                        <Link
+                        </Link></div>
+                        
+                      
+                      <div><Link
                           href="https://twitter.com/dxgagency"
                           target="_blank"
                         >
@@ -137,10 +128,11 @@ export default function Footer() {
                             fill="current"
                             className="icon-hover h-6 w-6 rounded text-brand"
                           />
-                        </Link>
-                      </MotionDiv>
-                      <MotionDiv variants={zoomIn(0.4, 0.5)}>
-                        <Link
+                        </Link></div>
+                        
+                      
+                      
+                      <div><Link
                           href="https://www.instagram.com/dxg.agency"
                           target="_blank"
                         >
@@ -148,9 +140,10 @@ export default function Footer() {
                             fill="current"
                             className="icon-hover h-6 w-6 rounded text-brand"
                           />
-                        </Link>
-                      </MotionDiv>
-                    </MotionDiv>
+                        </Link></div>
+                        
+                      
+                    </div>
                   </div>
                   {/* Second Column */}
                   <div className="flex flex-col">
@@ -160,12 +153,9 @@ export default function Footer() {
                       </h2>
                       {SITECONFIG.footerNav.services.map((item, index) => {
                         return (
-                          <MotionDiv
-                            key={index}
-                            variants={fadeIn("up", "tween", index * 0.1, 1)}
-                            className=""
-                          >
-                            <Link key={index} href={item.slug}>
+                         <div key={index} className="flex flex-row">
+                          
+                            <Link  href={item.slug}>
                               <Button
                                 variant={"link"}
                                 className="mb-3 md:mb-1 whitespace-pre-line pr-0 text-right text-white hover:text-brand md:pl-0 md:text-left text-[12px] md:text-[14px]"
@@ -173,7 +163,8 @@ export default function Footer() {
                                 {item.title}
                               </Button>
                             </Link>
-                          </MotionDiv>
+                           
+                          </div>
                         );
                       })}
                     </div>
@@ -190,10 +181,7 @@ export default function Footer() {
                       </h2>
                       {SITECONFIG.footerNav.whyDXG.map((item, index) => {
                         return (
-                          <MotionDiv
-                            key={index}
-                            variants={fadeIn("up", "tween", index * 0.1, 1)}
-                          >
+                          <div key={index} className="flex flex-row">
                             <Link key={index} href={item.slug}>
                               <Button
                                 variant={"link"}
@@ -202,7 +190,7 @@ export default function Footer() {
                                 {item.title}
                               </Button>
                             </Link>
-                          </MotionDiv>
+                          </div>
                         );
                       })}
                     </div>
@@ -216,10 +204,7 @@ export default function Footer() {
                       </h2>
                       {SITECONFIG.footerNav.legal.map((item, index) => {
                         return (
-                          <MotionDiv
-                            key={index}
-                            variants={fadeIn("up", "tween", index * 0.1, 1)}
-                          >
+                          <div key={index} className="flex flex-row">
                             <Link key={index} href={item.slug}>
                               <Button
                                 variant={"link"}
@@ -228,14 +213,14 @@ export default function Footer() {
                                 {item.title}
                               </Button>
                             </Link>
-                          </MotionDiv>
+                          </div>
                         );
                       })}
                     </div>
                   </div>
                 </div>
               </div>
-            </MotionDiv>
+            </div>
           </div>
         </MaxWidthWrapper>
         <hr className="border-gray-500" />
