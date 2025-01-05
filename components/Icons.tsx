@@ -135,28 +135,28 @@ export const Icons = {
         fill="#2DC6F5"
         stroke="#2DC6F5"
         strokeWidth="4"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
       <path
         d="M2 52V40.75C2 33.8463 6.7125 28.25 12.5263 28.25H18.8425C23.9488 28.25 27 33.2838 27 33.2838"
         stroke="#2DC6F5"
         strokeWidth="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M52 52V40.75C52 33.8463 47.2312 28.25 41.3488 28.25H34.9575C30.0062 28.25 26.99 33.2838 27 33.2838M10.75 47H44.5"
         stroke="#2DC6F5"
         strokeWidth="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M39.8687 42.3225L41.4187 43.8813L44.5187 47L41.4187 50.2013L39.8687 51.8025M14.9124 42.29L13.3374 43.8575L10.1899 46.9913L13.3374 50.1763L14.9124 51.77"
         stroke="#2DC6F5"
         strokeWidth="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),

@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import React, { Suspense, useEffect, useMemo, useState } from "react";
-import "@/app/globals.css";
+// import "./app/globals.css";
 import parse from "html-react-parser";
 import { MotionDiv } from "@/components/Motion";
 import { fadeIn, slideIn, staggerContainer } from "@/lib/motion";
