@@ -74,7 +74,7 @@ export default function TestimonialSliderTwo() {
         </div>
         <div className="md:hidden text-white -translate-y-10 scale-150 translate-x-1/4 ">
           <Icons.leftArrow className="text-white swiper-button-prev md:translate-y-5 md:scale-150 md:-translate-x-2" />
-        </div>{" "}
+        </div>
         <div className="hidden md:block text-white scale-150 absolute right-0 top-1/2 -translate-y-10 xl:-translate-y-20 ">
           <Icons.rightArrow className="text-white swiper-button-next scale-150" />
         </div>
