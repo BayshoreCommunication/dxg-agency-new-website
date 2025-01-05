@@ -115,7 +115,6 @@ const BlogWideCard = ({
                           className="absolute left-0 top-0"
                           loading="lazy"
                           blurDataURL={`${item.featuredImage?.image?.url}`}
-                          placeholder="blur"
                         />
                       </div>
                       <div className="flex flex-grow flex-col justify-center">

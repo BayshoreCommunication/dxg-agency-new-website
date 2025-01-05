@@ -73,12 +73,12 @@ const Page = () => {
 
   //console.log(post);
   return (
-    <div className="">
-      <div className="bg-black mx-auto w-full px-2.5 md:px-28">
+    <div className="container">
+      <div className="bg-black mx-auto w-full ">
         <h1 className="pt-4 text-2xl font-bold text-white">{post.title}</h1>
         <hr className="mb-4 h-2 border-gray-500" />
         <div className="flex flex-col gap-4 lg:flex-row">
-          <div className="w-full py-2 lg:w-9/12">
+          <div className="w-full py-2 lg:w-8/12">
             <div className="w-full text-white">
               <div className="imageEntryAnimation relative h-[220px] w-full bg-red-200 md:h-[445px]">
                 {/* Added animation class here */}
@@ -103,7 +103,7 @@ const Page = () => {
             </div>
           </div>
           <div
-            className="w-full p-2 lg:w-3/12"
+            className="w-full p-2 lg:w-4/12"
             style={{
               overflowY: "auto",
               maxHeight: "84vh",
