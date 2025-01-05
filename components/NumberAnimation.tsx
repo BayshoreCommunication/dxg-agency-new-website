@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import "@/style/custom.css";
+// import "@/style/custom.css";
 import { cn } from "@/lib/utils";
 
 interface Number {
@@ -20,7 +20,7 @@ const NumberAnimation = ({
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCount((prevCount) =>
-        prevCount < value ? prevCount + incrementPlus : prevCount
+        prevCount < value ? prevCount + incrementPlus : prevCount,
       );
     }, duration);
 

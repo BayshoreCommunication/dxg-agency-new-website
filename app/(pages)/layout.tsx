@@ -37,11 +37,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full scroll-smooth bg-black">
+    <html lang="en" className="h-full scroll-smooth bg-black ">
       <body
         className={cn(
           "relative h-full overflow-x-hidden font-sans antialiased",
-          inter.className
+          inter.className,
         )}
       >
         <Navbar />

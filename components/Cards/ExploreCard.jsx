@@ -9,7 +9,7 @@ import { Icons } from "../Icons";
 // import { P } from "../Typography";
 // import Link from "next/link";
 // import { zoomIn } from "@/lib/motion";
-import "@/style/custom.css";
+// import "@/style/custom.css";
 const ExploreCard = ({
   id,
   imgUrl,

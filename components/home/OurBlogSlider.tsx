@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "@/style/custom.css";
+// import "@/style/custom.css";
 
 import { BlogData } from "@/config/data";
 import { BlogCard } from "../BlogCard";

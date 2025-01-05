@@ -1,16 +1,16 @@
-'use client';
-import { Autoplay, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+"use client";
+import { Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
 
-import '@/style/custom.css';
-import Image from 'next/image';
-import { Icons } from './Icons';
+import Image from "next/image";
+import { Icons } from "./Icons";
 
-import { TESTIMONIAL_DATA } from '@/config/data';
-import { useState } from 'react';
+import { TESTIMONIAL_DATA } from "@/config/data";
+import { useState } from "react";
+import { ChevronLeftCircleIcon, ChevronRightCircleIcon } from "lucide-react";
 export default function TestimonialSliderTwo() {
   const [bgImage, setBgImage] = useState(`/testimonial/client-2.png`);
 
@@ -25,15 +25,15 @@ export default function TestimonialSliderTwo() {
   };
 
   return (
-    <div className='relative mt-10 '>
-      <div className='relative mb-0 md:mb-14'>
+    <div className="relative mt-10 ">
+      <div className="relative mb-0 md:mb-14">
         <Swiper
           modules={[Autoplay, Navigation]}
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
-          className='mx-auto  md:max-w-xl lg:flex lg:max-w-3xl'
+          className="mx-auto  md:max-w-xl lg:flex lg:max-w-3xl text-white"
           onSlideChange={(swiper) => {
             updateBgImage(swiper.activeIndex);
           }}
@@ -45,47 +45,52 @@ export default function TestimonialSliderTwo() {
           {TESTIMONIAL_DATA.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className='flex flex-col items-center md:flex-row'>
-                  <div className=' relative h-64 w-56 md:h-64 md:w-56 md:flex-[1.5] lg:flex-1'>
+                <div className="flex flex-col items-center md:flex-row">
+                  <div className=" relative h-64 w-56 md:h-64 md:w-56 md:flex-[1.5] lg:flex-1">
                     <Image
                       src={item.image}
                       alt={item.name}
                       fill
-                      className=' object-cover'
+                      className=" object-cover"
                     />
                   </div>
-                  <div className='mb-20 mt-10 flex flex-[2] flex-col pl-2 pr-2 md:mb-0 md:mt-0 md:flex-[2] md:pl-6 lg:flex-[2] lg:pl-10'>
-                    <Icons.quote className='mb-4 h-8 w-8 fill-current text-brand md:h-10 md:w-10' />
-                    <h4 className='text-base font-normal text-white opacity-60 md:text-xl'>
+                  <div className="mb-20 mt-10 flex flex-[2] flex-col pl-2 pr-2 md:mb-0 md:mt-0 md:flex-[2] md:pl-6 lg:flex-[2] lg:pl-10">
+                    <Icons.quote className="mb-4 h-8 w-8 fill-current text-brand md:h-10 md:w-10" />
+                    <h4 className="text-base font-normal text-white opacity-60 md:text-xl">
                       {item.quote}
                     </h4>
-                    <h2 className='my-2 text-2xl font-semibold text-white'>
+                    <h2 className="my-2 text-2xl font-semibold text-white">
                       {item.name}
                     </h2>
-                    <h2 className='font-bold text-brand'>{item.title}</h2>
+                    <h2 className="font-bold text-brand">{item.title}</h2>
                   </div>
                 </div>
               </SwiperSlide>
             );
           })}
         </Swiper>
-
-        <div className='swiper-button-next '>
-          <Icons.rightArrow className='text-2xl text-white' />
+        <div className="md:hidden text-white -translate-y-10 scale-150 bottom-0 -translate-x-1/4">
+          <Icons.rightArrow className="text-white swiper-button-next translate-y-10 md:-translate-y-10 md:scale-150 " />
         </div>
-        <div className='swiper-button-prev '>
-          <Icons.leftArrow className='text-white ' />
+        <div className="md:hidden text-white -translate-y-10 scale-150 translate-x-1/4 ">
+          <Icons.leftArrow className="text-white swiper-button-prev md:translate-y-5 md:scale-150 md:-translate-x-2" />
+        </div>{" "}
+        <div className="hidden md:block text-white scale-150 absolute right-0 top-1/2 -translate-y-10 xl:-translate-y-20 ">
+          <Icons.rightArrow className="text-white swiper-button-next scale-150" />
+        </div>
+        <div className="hidden md:block  text-white scale-150 absolute  right-0 bottom-1/2 translate-y-10 ">
+          <Icons.leftArrow className="text-white swiper-button-prev scale-150 -translate-x-2.5" />
         </div>
       </div>
-      <div className='absolute top-[-12%] md:top-[-30%] lg:left-[20%] lg:top-[0%] xl:left-[15%] xl:top-[-15%] '>
-        <div className='relative h-56 w-52 md:h-60 md:w-56'>
+      <div className="absolute top-[-12%] md:top-[-30%] lg:left-[20%] lg:top-[0%] xl:left-[15%] xl:top-[-15%] ">
+        <div className="relative h-56 w-52 md:h-60 md:w-56">
           <Image
             src={bgImage}
-            alt='testimonial'
+            alt="testimonial"
             fill
-            className='object-cover'
+            className="object-cover"
           />
-          <div className='absolute inset-0 flex items-center justify-center bg-black opacity-60'></div>
+          <div className="absolute inset-0 flex items-center justify-center bg-black opacity-60"></div>
         </div>
       </div>
     </div>
