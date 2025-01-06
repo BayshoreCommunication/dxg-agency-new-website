@@ -41,8 +41,8 @@ export const RecentBlogSection = () => {
             }}
           >
             <BlogWideCard
-              className="flex flex-col flex-wrap gap-y-5 gap-x-40 md:flex-row"
-              linkClassName="lg:w-[45%]"
+              className="flex flex-col flex-wrap gap-y-5 gap-x-20 justify-between  md:flex-row"
+              linkClassName="lg:w-[44%]"
             />
           </div>
         </div>

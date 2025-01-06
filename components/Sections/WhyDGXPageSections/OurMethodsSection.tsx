@@ -15,7 +15,7 @@ export const OurMethodsSection = () => {
           // initial='hidden'
           // whileInView='show'
           // viewport={{ once: false, amount: 0.25 }}
-          className="grid grid-cols-1 justify-items-center gap-2  md:grid-cols-4 md:gap-8"
+          className="grid grid-cols-1 justify-items-center gap-2  lg:grid-cols-2  md:gap-8 xl:grid-cols-3 2xl:grid-cols-4"
         >
           {OurMethods.map((item, index) => {
             return (
@@ -25,7 +25,7 @@ export const OurMethodsSection = () => {
                 // variants={fadeIn('up', 'tween', index * 0.1, 0.5)}
                 key={index}
               >
-                <div>
+                <div className="w-full">
                   <MethodCard key={index} {...item} />;
                 </div>
               </MotionEffect>

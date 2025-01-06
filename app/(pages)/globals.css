@@ -729,6 +729,15 @@ body {
   padding-bottom: 10px;
   line-height: normal;
 }
+.lazyTextElement h1,
+.lazyTextElement h2,
+.lazyTextElement h3,
+.lazyTextElement h4,
+.lazyTextElement h5,
+.lazyTextElement h6 {
+  font-weight: 700;
+  text-align: left;
+}
 
 .lazyTextElement h1 {
   font-size: 40px;
