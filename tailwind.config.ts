@@ -9,17 +9,17 @@ export default {
   ],
   theme: {
     extend: {
-      container: {
-        center: true,
-
-        padding: {
-          DEFAULT: "0.5rem",
-          md: "2rem",
-          lg: "4rem",
-          xl: "5rem",
-          // "2xl": "8rem",
-        },
-      },
+      // container: {
+      //   center: true,
+      //
+      //   padding: {
+      //     DEFAULT: "0.5rem",
+      //     md: "0.5rem",
+      //     lg: "0.5rem",
+      //     xl: "0.5rem",
+      //     // "2xl": "8rem",
+      //   },
+      // },
       colors: {
         brand: "#2DC6F5",
         header: "#2C2C2C",

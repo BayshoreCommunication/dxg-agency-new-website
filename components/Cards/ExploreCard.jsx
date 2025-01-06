@@ -36,7 +36,7 @@ const ExploreCard = ({
     onMouseLeave={() => handleCardHover(null)}
   >
     {active !== id ? (
-      <h2 className="absolute z-0 text-3xl font-extrabold  uppercase text-white lg:bottom-16 lg:origin-[0,0] lg:rotate-[-90deg]">
+      <h2 className="absolute z-0 text-3xl font-extrabold  uppercase text-white lg:bottom-42 lg:origin-[0,0] lg:rotate-[-90deg]">
         {title}
       </h2>
     ) : (

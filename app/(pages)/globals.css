@@ -719,3 +719,35 @@ body {
     width: 750px !important;
   }
 }
+
+.lazyTextElement h1,
+.lazyTextElement h2,
+.lazyTextElement p,
+.lazyTextElement br,
+.lazyTextElement nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: normal;
+}
+
+.lazyTextElement h1 {
+  font-size: 40px;
+}
+
+.lazyTextElement h2 {
+  font-size: 25px;
+}
+.lazyTextElement h3 {
+  padding-top: 10px;
+}
+
+.lazyTextElement p {
+  font-size: 17px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.lazyTextElement ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}

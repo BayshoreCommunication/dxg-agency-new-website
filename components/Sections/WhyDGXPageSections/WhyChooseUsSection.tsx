@@ -9,14 +9,14 @@ import NumberAnimation from "@/components/NumberAnimation";
 
 export const WhyChooseUsSection = () => {
   return (
-    <div className="bg-black py-10">
+    <div className="bg-black py-10 ">
       {/* <MaxWidthWrapper> */}
       <MotionDiv
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="container"
+        className="container m-auto px-2.5 md:px-28"
       >
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Images */}

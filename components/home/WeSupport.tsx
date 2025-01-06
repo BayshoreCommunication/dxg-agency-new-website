@@ -26,7 +26,7 @@ export default function WeSupport() {
         <div className="flex flex-col  items-end py-5 md:py-10 ">
           <div className=" md:max-w-2xl">
             <Title text={infos.title} />
-            <Paragraph text={infos.description} className="text-left" />
+            <Paragraph text={infos.description} className="text-center" />
           </div>
 
           {/* <BottomToTop>
