@@ -2,7 +2,7 @@ import parse from "html-react-parser";
 import Image from "next/image";
 import BlogWideCard from "@/components/BlogCard/BlogWideCard";
 
-export function generateMetadata({ blogDetails }) {
+export function generateMetadata({ blogDetails }: { blogDetails: any }) {
   return {
     title: blogDetails?.title,
     description: blogDetails?.metaDescription,
@@ -10,13 +10,13 @@ export function generateMetadata({ blogDetails }) {
       title: blogDetails?.title,
       description: `${blogDetails?.metaDescription}...`,
       images: [blogDetails.featuredImage?.image?.url],
-      url: `https://www.dxg.agency/post/${blogDetails.slug},
+      url: `https://www.dxg.agency/post/${blogDetails.slug}`,
       type: "article",
-      site_name: 'Digital Xperience Group',
+      site_name: "Digital Xperience Group",
     },
   };
 }
-const Client = ({ post }) => {
+const Client = ({ post }: { post: any }) => {
   console.log(post);
   const postDate = (date: any) => {
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
