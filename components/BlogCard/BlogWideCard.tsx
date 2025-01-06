@@ -110,9 +110,9 @@ const BlogWideCard = ({
                           src={`${item.featuredImage?.image?.url}`}
                           alt={"featuredImage.altText"}
                           fill
+                          // sizes=""
                           quality={100}
-                          objectPosition="center"
-                          className="absolute left-0 top-0"
+                          className="absolute left-0 top-0 object-cover"
                           loading="lazy"
                           blurDataURL={`${item.featuredImage?.image?.url}`}
                         />
