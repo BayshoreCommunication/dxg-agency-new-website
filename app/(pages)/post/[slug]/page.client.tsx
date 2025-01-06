@@ -2,21 +2,21 @@ import parse from "html-react-parser";
 import Image from "next/image";
 import BlogWideCard from "@/components/BlogCard/BlogWideCard";
 
-export function generateMetadata({ blogDetails }: { blogDetails: any }) {
+export function generateMetadata({ blogDetails }) {
   return {
     title: blogDetails?.title,
     description: blogDetails?.metaDescription,
     openGraph: {
       title: blogDetails?.title,
       description: `${blogDetails?.metaDescription}...`,
-      images: [blogDetails?.bodyImage[0]?.image?.url],
-      url: `https://backend-dxgwebsite.vercel.app/post/${blogDetails?.slug}`,
+      images: [blogDetails.featuredImage?.image?.url],
+      url: `https://www.dxg.agency/post/${blogDetails.slug},
       type: "article",
-      site_name: "dxg.agency",
+      site_name: 'Digital Xperience Group',
     },
   };
 }
-const Client = ({ post }: { post: any }) => {
+const Client = ({ post }) => {
   console.log(post);
   const postDate = (date: any) => {
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
