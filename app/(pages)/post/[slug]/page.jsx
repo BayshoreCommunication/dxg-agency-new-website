@@ -64,7 +64,7 @@ const Client = async ({ params }) => {
     return formattedDate;
   };
 
-  if (post.length === 0)
+  if (!posts)
     return (
       <div
         className="w-[90%] relative m-auto h-full flex flex-col gap-20 justify-center items-center pt-28"
