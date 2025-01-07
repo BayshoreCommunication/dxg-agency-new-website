@@ -27,6 +27,9 @@ import parse from "html-react-parser";
 import Image from "next/image";
 import BlogWideCard from "@/components/BlogCard/BlogWideCard";
 import postData from "./_getPost.js";
+import { MotionDiv } from "@/components/Motion.tsx";
+import { fadeIn, staggerContainer } from "@/lib/motion.ts";
+import MotionEffect from "@/components/Animation/MotionEffect.tsx";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -94,14 +97,18 @@ const Client = async ({ params }) => {
     );
 
   return (
-    <div className="px-2.5 md:px-28">
+    <div className="px-2.5 md:px-28 text-white">
       <div className="bg-black mx-auto w-full ">
         <h1 className="pt-4 text-2xl font-bold text-white">{post.title}</h1>
         <hr className="mb-4 h-2 border-gray-500" />
         <div className="flex flex-col gap-4 lg:flex-row">
           <div className="w-full py-2 lg:w-8/12">
-            <div className="w-full text-white">
-              <div className="imageEntryAnimation relative h-[220px] w-full bg-red-200 md:h-[445px]">
+            <MotionEffect
+              effect="fade-up"
+              duration={1000}
+              className="w-full text-white"
+            >
+              <div className="imageEntryAnimation relative h-[220px] w-full bg-red-200 md:h-[445px] ">
                 {/* Added animation class here */}
                 <Image
                   src={`${post.featuredImage?.image?.url}`}
@@ -121,7 +128,7 @@ const Client = async ({ params }) => {
               <div key={post._id} className="lazyTextElement">
                 {parse(post.body)}
               </div>
-            </div>
+            </MotionEffect>
           </div>
           <div
             className="w-full p-2 lg:w-4/12"
