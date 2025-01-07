@@ -41,6 +41,7 @@ export default function TestimonialSliderTwo() {
             delay: 10000,
             disableOnInteraction: true,
           }}
+          spaceBetween={20}
         >
           {TESTIMONIAL_DATA.map((item, index) => {
             return (
@@ -51,12 +52,12 @@ export default function TestimonialSliderTwo() {
                       src={item.image}
                       alt={item.name}
                       fill
-                      className=" object-cover"
+                      className=" object-cover "
                     />
                   </div>
-                  <div className="mb-20 mt-10 flex flex-[2] flex-col pl-2 pr-2 md:mb-0 md:mt-0 md:flex-[2] md:pl-6 lg:flex-[2] lg:pl-10">
+                  <div className="mb-20 mt-10 flex flex-[2]  flex-col px-2 md:mb-0 md:mt-0 md:flex-[2] md:pl-6 lg:flex-[2] lg:pl-10">
                     <Icons.quote className="mb-4 h-8 w-8 fill-current text-brand md:h-10 md:w-10" />
-                    <h4 className="text-base font-normal text-white opacity-60 md:text-xl">
+                    <h4 className="text-base font-normal text-white opacity-60 md:text-xl ">
                       {item.quote}
                     </h4>
                     <h2 className="my-2 text-2xl font-semibold text-white">
