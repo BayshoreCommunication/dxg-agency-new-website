@@ -116,6 +116,7 @@ const Client = async ({ params }) => {
                   src={`${post.featuredImage?.image?.url}`}
                   alt={post.title}
                   fill
+                  quality={100}
                   style={{
                     objectFit: "fill",
                     width: "100%",
