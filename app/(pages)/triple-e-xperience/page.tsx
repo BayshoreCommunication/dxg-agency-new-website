@@ -1,6 +1,6 @@
 import { BreadCrumb } from "@/components/Breadcrumb";
 import React from "react";
-import EngageImage from "@/public/triple-e-xperience/dxg-agency-banner-exchange.png";
+import EngageImage from "@/public/triple-e-xperience/dxg-agency-banner-engage.png";
 import EnlightImage from "@/public/triple-e-xperience/dxg-agency-banner-exchange.png";
 import ExchangeImage from "@/public/triple-e-xperience/dxg-agency-banner-enlight.png";
 import NewsLetter from "@/components/NewsLetter";

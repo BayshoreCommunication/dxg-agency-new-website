@@ -2,7 +2,7 @@
 
 // import { motion } from "framer-motion";
 
-import { fadeIn } from "@/lib/motion";
+import { fadeIn, zoomIn } from "@/lib/motion";
 import { MotionDiv } from "../Motion";
 import { Icons } from "../Icons";
 // import { Button } from "../ui/button";
@@ -20,13 +20,13 @@ const ExploreCard = ({
   handleCardHover,
 }) => (
   <MotionDiv
-    variants={fadeIn("right", "tween", index * 0.4, 0.75)}
+    variants={fadeIn("right", "tween", index * 0.45)}
     className={`relative ${
       active === id ? "flex-[10] lg:flex-[3.6]" : "flex-[2] lg:flex-[0.4]"
-    } duration-700 ease-out-flex flex h-[500px] min-w-[100px] cursor-pointer items-center justify-center transition-[flex]`}
+    }   duration-1000 ease-out-flex flex h-[500px] min-w-[100px] cursor-pointer items-center justify-center transition-[flex] `}
     style={{
       backgroundImage: `linear-gradient(rgba(45, 198, 245, 0.6), rgba(45, 198, 245, 0)), url(${imgUrl})`,
-      transition: "0.9s cubic-bezier(0.05, 0.61, 0.41, 0.95)",
+      // transition: "0.9s  ease-in-out",
       backgroundSize: "auto 100%",
       backgroundPosition: "center center",
       backgroundRepeat: "no-repeat",
@@ -42,7 +42,7 @@ const ExploreCard = ({
     ) : (
       <div className=" flex h-full w-full flex-col items-center justify-center bg-[rgba(0,0,0,0.5)] p-8">
         <MotionDiv
-          variants={fadeIn("up", "tween", 0.4, 0.5)}
+          variants={zoomIn(0.1, 0.3)}
           initial="hidden"
           whileInView="show"
         >
@@ -53,7 +53,7 @@ const ExploreCard = ({
             <h2 className="py-4 text-xl font-bold uppercase text-white ">
               {title}
             </h2>
-            <div className="mb-3 text-center text-base font-medium leading-[27px] tracking-[0.18px] text-white">
+            <div className="mb-3 text-center text-base font-medium leading-[27px] tracking-[0.18px] text-white 2xl:w-[900px]">
               {description}
             </div>
             {/* <div className='mt-5'>

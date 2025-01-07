@@ -18,9 +18,9 @@ export const WhyChooseUsSection = () => {
         viewport={{ once: false, amount: 0.25 }}
         className="container m-auto px-2.5 md:px-28"
       >
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Images */}
-          <div className="flex w-full items-end gap-4">
+          <div className="flex w-full items-end lg:items-center gap-4">
             <MotionDiv variants={zoomIn(0.2, 0.5)} className="relative w-1/2">
               <Image
                 src={presentation}
