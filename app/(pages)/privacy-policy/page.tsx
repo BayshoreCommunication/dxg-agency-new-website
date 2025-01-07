@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="bg-white">
       <MaxWidthWrapper>
-        <div className="container px-2.5 md:px-28 m-auto py-10">
+        <div className=" max-w-[1400px] px-8 py-10 m-auto ">
           <h1 className="py-2 text-center text-3xl font-bold">
             Privacy Policy
           </h1>

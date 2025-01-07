@@ -34,7 +34,7 @@ export default async function Contact() {
           texAlign: "text-left",
         }}
       />
-      <div className=" px-2.5 md:px-28 container m-auto  py-9 lg:py-16">
+      <div className="  max-w-[1400px] px-8 py-10 m-auto  lg:py-16">
         <MotionDiv
           variants={staggerContainer(0.2, 0.1)}
           initial="hidden"

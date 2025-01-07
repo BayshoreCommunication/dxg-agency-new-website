@@ -42,7 +42,7 @@ const ExploreCard = ({
     ) : (
       <div className=" flex h-full w-full flex-col items-center justify-center bg-[rgba(0,0,0,0.5)] p-8">
         <MotionDiv
-          variants={zoomIn(0.1, 0.3)}
+          variants={fadeIn("up", 0.1, 0.3)}
           initial="hidden"
           whileInView="show"
         >

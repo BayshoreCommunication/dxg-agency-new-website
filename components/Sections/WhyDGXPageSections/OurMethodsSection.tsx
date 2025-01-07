@@ -9,13 +9,13 @@ export const OurMethodsSection = () => {
   return (
     <div className="bg-black py-10 ">
       {/* <MaxWidthWrapper> */}
-      <div className="container px-2.5 md:px-28 m-auto">
+      <div className="max-w-[1400px] px-8 m-auto">
         <MotionDiv
           // variants={staggerContainer(0.2, 0.1)}
           // initial='hidden'
           // whileInView='show'
           // viewport={{ once: false, amount: 0.25 }}
-          className="grid grid-cols-1 justify-items-center gap-2  lg:grid-cols-2 2xl:grid-cols-4 "
+          className="grid grid-cols-1 justify-items-center gap-2  md:grid-cols-4 md:gap-8"
         >
           {OurMethods.map((item, index) => {
             return (

@@ -116,7 +116,7 @@ const Modal = ({ onRequestClose }: any) => {
         const fileExtension = fileName.split(".").pop();
         if (fileExtension && !validFileFormats.includes(fileExtension)) {
           alert(
-            "File format not supported. Please upload pdf, docs, png, jpg, jpeg, txt, rtf, xls, xlsx, ppt, pptx"
+            "File format not supported. Please upload pdf, docs, png, jpg, jpeg, txt, rtf, xls, xlsx, ppt, pptx",
           );
           return false;
         }
@@ -503,7 +503,7 @@ export default function ProposalForm() {
       {isModalOpen && <Modal onRequestClose={toggleModal} />}
       <Button
         onClick={toggleModal}
-        className="capsule-hover capsule-button rounded-full bg-brand px-5 py-2 font-semibold text-white"
+        className="capsule-hover capsule-button rounded-full bg-brand px-5 py-2.5 font-semibold text-white"
       >
         Request for Proposal
       </Button>

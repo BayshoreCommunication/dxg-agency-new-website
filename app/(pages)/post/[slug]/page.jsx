@@ -99,7 +99,9 @@ const Client = async ({ params }) => {
   return (
     <div className="px-2.5 md:px-28 text-white">
       <div className="bg-black mx-auto w-full ">
-        <h1 className="pt-4 text-2xl font-bold text-white">{post.title}</h1>
+        <h1 className="pt-4 text-2xl font-bold text-white pb-3">
+          {post.title}
+        </h1>
         <hr className="mb-4 h-2 border-gray-500" />
         <div className="flex flex-col gap-4 lg:flex-row">
           <div className="w-full py-2 lg:w-8/12">

@@ -20,8 +20,8 @@ export const MethodCard: React.FC<MethodCardProps> = ({
   return (
     <div
       className={`${
-        index === 2 || index === 3 ? "2xl:mt-10" : ""
-      } relative h-[400px] w-[320px] md:w-[400px] overflow-hidden rounded-3xl bg-cover bg-center shadow-md transition-all duration-300 lg:w-[350px] xl:w-[400px] 2xl:w-[300px]`}
+        index === 2 || index === 3 ? "mt-10" : ""
+      } relative h-[400px] w-[320px]  overflow-hidden rounded-3xl bg-cover bg-center shadow-md transition-all duration-300   xl:w-[300px]`}
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="absolute inset-0 rounded-md bg-black opacity-50"></div>

@@ -16,11 +16,11 @@ export const WhyChooseUsSection = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="container m-auto px-2.5 md:px-28"
+        className="max-w-[1400px] mx-auto px-8"
       >
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Images */}
-          <div className="flex w-full items-end lg:items-center gap-4">
+          <div className="flex w-full items-end  gap-4">
             <MotionDiv variants={zoomIn(0.2, 0.5)} className="relative w-1/2">
               <Image
                 src={presentation}
@@ -30,7 +30,7 @@ export const WhyChooseUsSection = () => {
                 className="rounded-3xl"
               />
             </MotionDiv>
-            <div className="relative flex w-1/2 flex-col gap-4">
+            <div className="relative flex w-1/2 flex-col gap-4 ">
               <MotionDiv
                 variants={fadeIn("down", "tween", 0.2, 1)}
                 className="absolute right-4 top-[-16px] flex h-16 w-12 flex-col items-center justify-center bg-brand md:right-10 md:top-[-24px] md:h-14 md:w-12"
@@ -107,7 +107,7 @@ export const WhyChooseUsSection = () => {
                   incrementPlus={100}
                   duration={100}
                 />
-                <p className="text-[10px] font-light text-white md:text-base">
+                <p className=" font-medium text-white text-[12px] md:text-[14px]">
                   Project Complete
                 </p>
               </MotionDiv>
@@ -121,7 +121,7 @@ export const WhyChooseUsSection = () => {
                   incrementPlus={10}
                   duration={100}
                 />
-                <p className="text-[10px] font-light text-white md:text-base">
+                <p className=" font-medium text-white text-[12px] md:text-[14px]">
                   Client Happy
                 </p>
               </MotionDiv>
@@ -135,7 +135,7 @@ export const WhyChooseUsSection = () => {
                   incrementPlus={1}
                   duration={500}
                 />
-                <p className="text-[10px] font-light text-white md:text-base">
+                <p className="font-medium text-white text-[12px] md:text-[14px]">
                   Project Running
                 </p>
               </MotionDiv>

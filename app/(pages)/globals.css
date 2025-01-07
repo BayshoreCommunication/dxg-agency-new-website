@@ -385,7 +385,7 @@ body {
   width: 90px;
   cursor: pointer;
   right: 0;
-  color: white;
+  color: #ffffff;
 }
 
 .swiper-button-prev,
@@ -393,8 +393,6 @@ body {
   left: auto !important;
   right: 0 !important;
   top: 30%;
-  color: white;
-  color: white;
 }
 
 /* Remove default content for all screen sizes */
@@ -405,6 +403,7 @@ body {
   content: "";
 }
 .lucide-circle-chevron-left {
+  color: white;
 }
 /* Media query for small devices */
 @media (max-width: 767px) {
@@ -412,7 +411,6 @@ body {
   .swiper-button-prev {
     top: 92%;
     bottom: auto;
-    olor: #ffffff;
   }
 
   .swiper-button-prev,
@@ -420,17 +418,18 @@ body {
     left: 0 !important;
     right: 0 !important;
     top: 92%;
-    color: white;
   }
 
   /* Adjust the margin or padding to reduce the gap */
   .swiper-button-next {
     transform: translateX(-240%);
+    color: #ffffff !important;
     /* Adjust the value as needed */
   }
 
   .swiper-button-prev {
     transform: translateX(240%);
+    color: #ffffff !important;
     /* Adjust the value as needed */
   }
 }

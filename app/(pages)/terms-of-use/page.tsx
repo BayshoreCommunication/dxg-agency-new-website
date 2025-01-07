@@ -3,12 +3,10 @@ import React from "react";
 
 export default function TermsService() {
   return (
-    <div className="bg-white px-2.5 md:px-28">
+    <div className="bg-white ">
       <MaxWidthWrapper>
-        <div className="container  px-2.5 md:px-20 py-10">
-          <h1 className="py-2 text-center text-3xl font-bold">
-            Terms and Conditions
-          </h1>
+        <div className=" max-w-[1400px] px-8 py-10 m-auto ">
+          <h1 className="py-2 text-center text-3xl font-bold">Terms of Use</h1>
 
           <h2 className="pt-5 text-2xl font-extrabold dark:text-white">
             Welcome to DXG!

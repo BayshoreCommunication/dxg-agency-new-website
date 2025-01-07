@@ -8,8 +8,8 @@ import { fadeIn } from "@/lib/motion";
 import Link from "next/link";
 import { Suspense, useEffect, useMemo, useState } from "react";
 import React from "react";
+import MotionEffect from "../Animation/MotionEffect";
 // interface BlogBigImageCardProps {
-//   createdAt: number;
 //   title: string;
 //   featuredImage: string;
 //   body: string;
@@ -87,60 +87,62 @@ const BlogWideCard = ({
   else
     return (
       blogsData && (
-        <div className={" " + className}>
-          {blogsData
-            ?.filter((blog: any) => blog.published === true)
-            ?.map((item: any) => {
-              return (
-                <Link
-                  href={`/post/${item.slug}`}
-                  key={item._id}
-                  // style={{ maxWidth: '100%' }}
-                  className={"w-full " + linkClassName}
-                >
-                  <div className="w-full cursor-pointer">
-                    <div className="flex w-full gap-4 text-white">
-                      {/* Adjusted for equal height */}
-                      <div
-                        className="relative flex-shrink-0"
-                        style={{ flexBasis: "calc(38% - 1rem)" }}
-                      >
-                        <div style={{ paddingTop: "100%" }}></div>
-                        <Image
-                          src={`${item.featuredImage?.image?.url}`}
-                          alt={"featuredImage.altText"}
-                          fill
-                          // sizes=""
-                          quality={100}
-                          className="absolute left-0 top-0 object-cover"
-                          loading="lazy"
-                          blurDataURL={`${item.featuredImage?.image?.url}`}
-                        />
-                      </div>
-                      <div className="flex flex-grow flex-col justify-center">
-                        {/* Adjusted for vertical center alignment */}
-                        <p className="text-xs">{postDate(item.createdAt)}</p>
-                        <h4 className="line-clamp-1 text-lg font-bold text-brand">
-                          {item.title}
-                        </h4>
-                        <div className="line-clamp-2 h-11 text-sm">
-                          {parse(item.body)}
+        <MotionEffect effect="fade-up" duration={2000}>
+          <div className={" " + className}>
+            {blogsData
+              ?.filter((blog: any) => blog.published === true)
+              ?.map((item: any) => {
+                return (
+                  <Link
+                    href={`/post/${item.slug}`}
+                    key={item._id}
+                    // style={{ maxWidth: '100%' }}
+                    className={"w-full " + linkClassName}
+                  >
+                    <div className="w-full cursor-pointer">
+                      <div className="flex w-full gap-4 text-white">
+                        {/* Adjusted for equal height */}
+                        <div
+                          className="relative flex-shrink-0"
+                          style={{ flexBasis: "calc(38% - 1rem)" }}
+                        >
+                          <div style={{ paddingTop: "100%" }}></div>
+                          <Image
+                            src={`${item.featuredImage?.image?.url}`}
+                            alt={"featuredImage.altText"}
+                            fill
+                            sizes=""
+                            quality={100}
+                            className="absolute left-0 top-0 object-cover"
+                            loading="lazy"
+                            blurDataURL={`${item.featuredImage?.image?.url}`}
+                          />
                         </div>
-                        <div className="mt-2 flex flex-wrap gap-2">
-                          <Button
-                            variant={"outline"}
-                            className={`blogButton m-0 mt-2 box-border rounded-full rounded-l-full rounded-r-full border-2 border-white bg-transparent`}
-                          >
-                            Read More
-                          </Button>
+                        <div className="flex flex-grow flex-col justify-center">
+                          {/* Adjusted for vertical center alignment */}
+                          <p className="text-xs">{postDate(item.createdAt)}</p>
+                          <h4 className="line-clamp-1 text-lg font-bold text-brand">
+                            {item.title}
+                          </h4>
+                          <div className="line-clamp-2 h-11 text-sm">
+                            {parse(item.body)}
+                          </div>
+                          <div className="mt-2 flex flex-wrap gap-2">
+                            <Button
+                              variant={"outline"}
+                              className={`blogButton m-0 mt-2 box-border rounded-full rounded-l-full rounded-r-full border-2 border-white bg-transparent`}
+                            >
+                              Read More
+                            </Button>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              );
-            })}
-        </div>
+                  </Link>
+                );
+              })}
+          </div>
+        </MotionEffect>
       )
     );
 };
