@@ -38,7 +38,7 @@ export default function WhoWeAre() {
         </MotionDiv>
       </div>
 
-      <div className="container px-2.5 md:px-28 m-auto py-9 lg:py-16">
+      <div className="max-w-[1400px] px-8  m-auto py-9 lg:py-16">
         <MotionDiv
           variants={staggerContainer(0.2, 0.1)}
           initial="hidden"
