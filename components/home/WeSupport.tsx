@@ -24,7 +24,7 @@ export default function WeSupport() {
     <div className="mb-10 mt-4 bg-black md:mb-28">
       <MaxWidthWrapper>
         <div className="flex flex-col  items-end py-5 md:py-10 ">
-          <div className=" md:max-w-2xl">
+          <div className=" md:max-w-3xl">
             <Title text={infos.title} />
             <Paragraph text={infos.description} className="text-left" />
           </div>
