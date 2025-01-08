@@ -66,7 +66,7 @@ export const EventsFormsStepOne: React.FC<MyComponentProps> = (props) => {
   };
 
   const onCheckProductItems = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLInputElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLInputElement>,
   ) => {
     setOrderCustomerItems({
       ...orderCustomrDlts,
@@ -126,7 +126,7 @@ export const EventsFormsStepOne: React.FC<MyComponentProps> = (props) => {
   return (
     <div ref={componentRef}>
       <div className=" bg-black">
-        <div className="container flex justify-center">
+        <div className="container m-auto flex justify-center">
           <form
             className="mb-10 mt-[450px] sm:mt-[250px]"
             onSubmit={handleSubmit}
@@ -552,10 +552,10 @@ export const EventsFormsStepOne: React.FC<MyComponentProps> = (props) => {
         </div>
       </div>
       <div className="bg-[#111617] py-24">
-        <div className="container opacity-20">
+        <div className="max-w-[1400px] px-8 m-auto opacity-20">
           <ClientMap />
         </div>
-        <div className="container mt-8 grid grid-cols-1 gap-2 sm:grid-cols-4 ">
+        <div className="max-w-[1400px] px-8 m-auto mt-8 grid grid-cols-1 gap-2 sm:grid-cols-4 ">
           <div className="flex items-center justify-center  p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
