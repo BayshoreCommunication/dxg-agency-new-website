@@ -226,7 +226,7 @@ export const EventsFormsStepTwo: React.FC<MyComponentProps> = (props) => {
         },
         function (error) {
           console.log("FAILED...", error);
-        }
+        },
       );
     const result = await handleProposalFormSubmit(formData);
     if (result) {
@@ -238,7 +238,7 @@ export const EventsFormsStepTwo: React.FC<MyComponentProps> = (props) => {
   };
 
   return (
-    <div className=" bg-black">
+    <div className="m-auto bg-black">
       <Dialog open={openPopup} onClose={setOpenPopup} className="relative z-10">
         <DialogBackdrop
           transition
@@ -289,7 +289,7 @@ export const EventsFormsStepTwo: React.FC<MyComponentProps> = (props) => {
           </div>
         </div>
       </Dialog>
-      <div className="container flex justify-center">
+      <div className="container m-auto flex justify-center">
         <form
           className="mb-16 mt-[500px] sm:mt-[250px]"
           onSubmit={(e) => {
