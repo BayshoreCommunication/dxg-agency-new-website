@@ -109,13 +109,14 @@ const BlogWideCard = ({
                           <div style={{ paddingTop: "100%" }}></div>
                           <Image
                             src={`${item.featuredImage?.image?.url}`}
-                            alt={"featuredImage.altText"}
+                            alt={`${featuredImage.altText}`}
                             fill
                             sizes=""
                             quality={100}
                             className="absolute left-0 top-0 object-cover"
                             loading="lazy"
                             blurDataURL={`${item.featuredImage?.image?.url}`}
+                            placeolder="blur"
                           />
                         </div>
                         <div className="flex flex-grow flex-col justify-center">

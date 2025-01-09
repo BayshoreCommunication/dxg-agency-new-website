@@ -122,6 +122,8 @@ const Client = async ({ params }) => {
                     width: "100%",
                   }}
                   loading="lazy"
+                  blurDataURL={`${post.featuredImage?.image?.url}`}
+                  placeolder="blur"
                 />
               </div>
               <p className="text-light mt-3">{postDate(post.createdAt)}</p>
