@@ -67,7 +67,7 @@ const Client = async ({ params }) => {
   if (!posts)
     return (
       <div
-        className="w-[90%] relative m-auto h-full flex flex-col gap-20 justify-center items-center pt-28"
+        className="w-ful relative m-auto min-h-screen flex flex-col gap-20 justify-center items-center -mt-10"
         role="status"
       >
         <Image
