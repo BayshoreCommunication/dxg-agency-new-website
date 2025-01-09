@@ -42,6 +42,7 @@ const BlogWideCard = ({
       .then((res) => res.json())
       .then((data) => {
         setBlogsData(data.data);
+        console.log(blogsData);
       });
   }, []);
 
@@ -94,7 +95,7 @@ const BlogWideCard = ({
               ?.map((item: any) => {
                 return (
                   <Link
-                    href={`/post/${item.slug}`}
+                    href={`/post/${item?.slug}`}
                     key={item._id}
                     // style={{ maxWidth: '100%' }}
                     className={"w-full " + linkClassName}
@@ -108,25 +109,25 @@ const BlogWideCard = ({
                         >
                           <div style={{ paddingTop: "100%" }}></div>
                           <Image
-                            src={`${item.featuredImage?.image?.url}`}
-                            alt={`${featuredImage.altText}`}
+                            src={`${item?.featuredImage?.image?.url}`}
+                            alt={`${item?.featuredImage?.altText}`}
                             fill
                             sizes=""
                             quality={100}
                             className="absolute left-0 top-0 object-cover"
                             loading="lazy"
-                            blurDataURL={`${item.featuredImage?.image?.url}`}
-                            placeolder="blur"
+                            blurDataURL={`${item?.featuredImage?.image?.url}`}
+                            placeholder="blur"
                           />
                         </div>
                         <div className="flex flex-grow flex-col justify-center">
                           {/* Adjusted for vertical center alignment */}
-                          <p className="text-xs">{postDate(item.createdAt)}</p>
+                          <p className="text-xs">{postDate(item?.createdAt)}</p>
                           <h4 className="line-clamp-1 text-lg font-bold text-brand">
-                            {item.title}
+                            {item?.title}
                           </h4>
                           <div className="line-clamp-2 h-11 text-sm">
-                            {parse(item.body)}
+                            {parse(item?.body)}
                           </div>
                           <div className="mt-2 flex flex-wrap gap-2">
                             <Button

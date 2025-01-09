@@ -100,7 +100,7 @@ const Client = async ({ params }) => {
     <div className="px-2.5 md:px-28 text-white">
       <div className="bg-black mx-auto w-full ">
         <h1 className="pt-4 text-2xl font-bold text-white pb-3">
-          {post.title}
+          {post?.title}
         </h1>
         <hr className="mb-4 h-2 border-gray-500" />
         <div className="flex flex-col gap-4 lg:flex-row">
@@ -113,8 +113,8 @@ const Client = async ({ params }) => {
               <div className="imageEntryAnimation relative h-[220px] w-full bg-red-200 md:h-[445px] ">
                 {/* Added animation class here */}
                 <Image
-                  src={`${post.featuredImage?.image?.url}`}
-                  alt={post.title}
+                  src={`${post?.featuredImage?.image?.url}`}
+                  alt={`${post?.featuredImage?.altText}`}
                   fill
                   quality={100}
                   style={{
@@ -122,16 +122,16 @@ const Client = async ({ params }) => {
                     width: "100%",
                   }}
                   loading="lazy"
-                  blurDataURL={`${post.featuredImage?.image?.url}`}
-                  placeolder="blur"
+                  blurDataURL={`${post?.featuredImage?.image?.url}`}
+                  placeholder="blur"
                 />
               </div>
-              <p className="text-light mt-3">{postDate(post.createdAt)}</p>
+              <p className="text-light mt-3">{postDate(post?.createdAt)}</p>
               <h4 className="text mb-3 text-xl font-bold text-brand">
-                {post.title}
+                {post?.title}
               </h4>
               <div key={post._id} className="lazyTextElement">
-                {parse(post.body)}
+                {parse(post?.body)}
               </div>
             </MotionEffect>
           </div>
