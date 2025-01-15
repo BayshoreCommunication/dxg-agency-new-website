@@ -41,8 +41,8 @@ const BlogWideCard = ({
     })
       .then((res) => res.json())
       .then((data) => {
-        setBlogsData(data.data);
-        // console.log(blogsData);
+        setBlogsData(data?.data);
+        //console.log(blogsData);
       });
   }, []);
 
@@ -91,12 +91,12 @@ const BlogWideCard = ({
         <MotionEffect effect="fade-up" duration={2000}>
           <div className={" " + className}>
             {blogsData
-              ?.filter((blog: any) => blog.published === true)
+              ?.filter((blog: any) => blog?.published === true)
               ?.map((item: any) => {
                 return (
                   <Link
                     href={`/post/${item?.slug}`}
-                    key={item._id}
+                    key={item?._id}
                     // style={{ maxWidth: '100%' }}
                     className={"w-full " + linkClassName}
                   >

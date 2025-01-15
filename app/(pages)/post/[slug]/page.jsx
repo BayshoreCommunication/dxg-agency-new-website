@@ -26,16 +26,16 @@
 import parse from "html-react-parser";
 import Image from "next/image";
 import BlogWideCard from "@/components/BlogCard/BlogWideCard";
-import postData from "./_getPost.js";
-import { MotionDiv } from "@/components/Motion.tsx";
-import { fadeIn, staggerContainer } from "@/lib/motion.ts";
-import MotionEffect from "@/components/Animation/MotionEffect.tsx";
+import postData from "./_getPost";
+import { MotionDiv } from "@/components/Motion";
+import { fadeIn, staggerContainer } from "@/lib/motion";
+import MotionEffect from "@/components/Animation/MotionEffect";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
   const posts = await postData;
-  const blogDetails = posts.data?.find((post) => post.slug === slug);
+  const blogDetails = posts?.data?.find((post) => post.slug === slug);
 
   return {
     title: blogDetails?.title,
@@ -54,7 +54,8 @@ const Client = async ({ params }) => {
   const { slug } = await params;
 
   const posts = await postData;
-  const post = posts.data?.find((post) => post.slug === slug);
+  const post = posts?.data?.find((post) => post?.slug === slug);
+  //console.log(post?.body);
   const postDate = (date) => {
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
       year: "numeric",
@@ -95,67 +96,67 @@ const Client = async ({ params }) => {
         </svg>
       </div>
     );
-
-  return (
-    <div className="px-2.5 md:px-28 text-white">
-      <div className="bg-black mx-auto w-full ">
-        <h1 className="pt-4 text-2xl font-bold text-white pb-3">
-          {post?.title}
-        </h1>
-        <hr className="mb-4 h-2 border-gray-500" />
-        <div className="flex flex-col gap-4 lg:flex-row">
-          <div className="w-full py-2 lg:w-8/12">
-            <MotionEffect
-              effect="fade-up"
-              duration={1000}
-              className="w-full text-white"
+  else
+    return (
+      <div className="px-2.5 md:px-28 text-white">
+        <div className="bg-black mx-auto w-full ">
+          <h1 className="pt-4 text-2xl font-bold text-white pb-3">
+            {post?.title}
+          </h1>
+          <hr className="mb-4 h-2 border-gray-500" />
+          <div className="flex flex-col gap-4 lg:flex-row">
+            <div className="w-full py-2 lg:w-8/12">
+              <MotionEffect
+                effect="fade-up"
+                duration={1000}
+                className="w-full text-white"
+              >
+                <div className="imageEntryAnimation relative h-[220px] w-full bg-red-200 md:h-[445px] ">
+                  {/* Added animation class here */}
+                  <Image
+                    src={`${post?.featuredImage?.image?.url}`}
+                    alt={`${post?.featuredImage?.altText}`}
+                    fill
+                    quality={100}
+                    style={{
+                      objectFit: "fill",
+                      width: "100%",
+                    }}
+                    loading="lazy"
+                    blurDataURL={`${post?.featuredImage?.image?.url}`}
+                    placeholder="blur"
+                  />
+                </div>
+                <p className="text-light mt-3">{postDate(post?.createdAt)}</p>
+                <h4 className="text mb-3 text-xl font-bold text-brand">
+                  {post?.title}
+                </h4>
+                <div key={post?._id} className="lazyTextElement">
+                  {parse(post?.body)}
+                </div>
+              </MotionEffect>
+            </div>
+            <div
+              className="w-full p-2 lg:w-4/12"
+              style={{
+                overflowY: "auto",
+                maxHeight: "84vh",
+                position: "sticky",
+                top: "0",
+                overflowX: "hidden",
+              }}
             >
-              <div className="imageEntryAnimation relative h-[220px] w-full bg-red-200 md:h-[445px] ">
-                {/* Added animation class here */}
-                <Image
-                  src={`${post?.featuredImage?.image?.url}`}
-                  alt={`${post?.featuredImage?.altText}`}
-                  fill
-                  quality={100}
-                  style={{
-                    objectFit: "fill",
-                    width: "100%",
-                  }}
-                  loading="lazy"
-                  blurDataURL={`${post?.featuredImage?.image?.url}`}
-                  placeholder="blur"
-                />
+              <div className="flex flex-col gap-5">
+                <h2 className="mb-3 text-xl font-bold text-brand">
+                  Recent Posts
+                </h2>
+                <BlogWideCard className="flex flex-row flex-wrap justify-between gap-5 h-48 " />
               </div>
-              <p className="text-light mt-3">{postDate(post?.createdAt)}</p>
-              <h4 className="text mb-3 text-xl font-bold text-brand">
-                {post?.title}
-              </h4>
-              <div key={post._id} className="lazyTextElement">
-                {parse(post?.body)}
-              </div>
-            </MotionEffect>
-          </div>
-          <div
-            className="w-full p-2 lg:w-4/12"
-            style={{
-              overflowY: "auto",
-              maxHeight: "84vh",
-              position: "sticky",
-              top: "0",
-              overflowX: "hidden",
-            }}
-          >
-            <div className="flex flex-col gap-5">
-              <h2 className="mb-3 text-xl font-bold text-brand">
-                Recent Posts
-              </h2>
-              <BlogWideCard className="flex flex-row flex-wrap justify-between gap-5 h-48 " />
             </div>
           </div>
         </div>
       </div>
-    </div>
-    // <h1>hi</h1>
-  );
+      // <h1>hi</h1>
+    );
 };
 export default Client;
