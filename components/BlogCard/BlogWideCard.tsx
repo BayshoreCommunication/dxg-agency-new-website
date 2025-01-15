@@ -42,7 +42,7 @@ const BlogWideCard = ({
       .then((res) => res.json())
       .then((data) => {
         setBlogsData(data.data);
-        console.log(blogsData);
+        // console.log(blogsData);
       });
   }, []);
 
