@@ -3,7 +3,7 @@ export default async function GetAllBlogPost() {
     "https://backend-dxgwebsite.vercel.app/site/blog",
     {
       cache: "force-cache",
-      next: { revalidate: 3600 },
+      next: { revalidate: 5 },
     }
   ).then((res) => res.json());
  
