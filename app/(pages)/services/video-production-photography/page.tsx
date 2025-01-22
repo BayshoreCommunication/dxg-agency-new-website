@@ -1,20 +1,20 @@
-import GetAQoute from '@/components/GetAQuote';
-import Testimonial from '@/components/Testimonial';
-import WhyDxg from '@/components/home/WhyDxg';
-import { VideoProductionPhotographySection } from '@/components/Sections/VideoProductionPhotographySection';
+import GetAQoute from "@/components/GetAQuote";
+import Testimonial from "@/components/Testimonial";
+import WhyDxg from "@/components/home/WhyDxg";
+import { VideoProductionPhotographySection } from "@/components/Sections/VideoProductionPhotographySection";
 
 export default function GraphicsAnimation() {
   return (
-    <div className='bg-black'>
+    <div className="bg-black">
       <VideoProductionPhotographySection />
-      <div className='flex flex-col gap-x-16 md:flex-row md:px-28'>
-        <div className='w-full p-4 md:w-1/2'>
+      <div className="flex flex-col gap-x-16 md:flex-row md:px-28">
+        <div className="w-full p-4 md:w-1/2">
           <p
             style={{
-              color: 'white',
-              paddingTop: '4rem',
-              paddingBottom: '4rem',
-              textAlign: 'justify',
+              color: "white",
+              paddingTop: "4rem",
+              paddingBottom: "4rem",
+              textAlign: "justify",
             }}
           >
             Capturing the essence and energy of your event is an art, and at
@@ -34,11 +34,14 @@ export default function GraphicsAnimation() {
             a timeless story beautifully preserved.
           </p>
         </div>
-        <div className='w-full p-4 md:w-1/2'>
+        <div className="w-full p-4 md:w-1/2">
           <GetAQoute />
         </div>
       </div>
-      <Testimonial />
+      <div className="overflow-hidden">
+        <Testimonial />
+      </div>
+
       <WhyDxg />
     </div>
   );

@@ -1,20 +1,20 @@
-import GetAQoute from '@/components/GetAQuote';
-import Testimonial from '@/components/Testimonial';
-import WhyDxg from '@/components/home/WhyDxg';
-import { VirtualHybridEventsSection } from '@/components/Sections/VirtualHybridEventsSection';
+import GetAQoute from "@/components/GetAQuote";
+import Testimonial from "@/components/Testimonial";
+import WhyDxg from "@/components/home/WhyDxg";
+import { VirtualHybridEventsSection } from "@/components/Sections/VirtualHybridEventsSection";
 
 export default function VirtualHybridEvents() {
   return (
-    <div className='bg-black'>
+    <div className="bg-black">
       <VirtualHybridEventsSection />
-      <div className='flex flex-col gap-x-16 md:flex-row md:px-28'>
-        <div className='w-full p-4 md:w-1/2'>
+      <div className="flex flex-col gap-x-16 md:flex-row md:px-28">
+        <div className="w-full p-4 md:w-1/2">
           <p
             style={{
-              color: 'white',
-              paddingTop: '4rem',
-              paddingBottom: '4rem',
-              textAlign: 'justify',
+              color: "white",
+              paddingTop: "4rem",
+              paddingBottom: "4rem",
+              textAlign: "justify",
             }}
           >
             In today&#39;s digital-first world, an event&#39;s success often
@@ -34,11 +34,13 @@ export default function VirtualHybridEvents() {
             fully immersive digital experience.
           </p>
         </div>
-        <div className='w-full p-4 md:w-1/2'>
+        <div className="w-full p-4 md:w-1/2">
           <GetAQoute />
         </div>
       </div>
-      <Testimonial />
+      <div className="overflow-hidden">
+        <Testimonial />
+      </div>
       <WhyDxg />
     </div>
   );

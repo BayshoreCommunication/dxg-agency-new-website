@@ -1,20 +1,20 @@
-import GetAQoute from '@/components/GetAQuote';
-import Testimonial from '@/components/Testimonial';
-import WhyDxg from '@/components/home/WhyDxg';
-import { ProductManagementPageSection } from '@/components/Sections/ProductManagementPageSection';
+import GetAQoute from "@/components/GetAQuote";
+import Testimonial from "@/components/Testimonial";
+import WhyDxg from "@/components/home/WhyDxg";
+import { ProductManagementPageSection } from "@/components/Sections/ProductManagementPageSection";
 
 export default function ProductionManagement() {
   return (
-    <div className='bg-black'>
+    <div className="bg-black">
       <ProductManagementPageSection />
-      <div className='flex flex-col gap-x-16 md:flex-row md:px-28'>
-        <div className='w-full p-4 md:w-1/2'>
+      <div className="flex flex-col gap-x-16 md:flex-row md:px-28">
+        <div className="w-full p-4 md:w-1/2">
           <p
             style={{
-              color: 'white',
-              paddingTop: '4rem',
-              paddingBottom: '4rem',
-              textAlign: 'justify',
+              color: "white",
+              paddingTop: "4rem",
+              paddingBottom: "4rem",
+              textAlign: "justify",
             }}
           >
             At DXG, we specialize in turning your vision into a seamless
@@ -32,11 +32,14 @@ export default function ProductionManagement() {
             message and your audience.
           </p>
         </div>
-        <div className='w-full p-4 md:w-1/2'>
+        <div className="w-full p-4 md:w-1/2">
           <GetAQoute />
         </div>
       </div>
-      <Testimonial />
+      <div className="overflow-hidden">
+        <Testimonial />
+      </div>
+
       <WhyDxg />
     </div>
   );

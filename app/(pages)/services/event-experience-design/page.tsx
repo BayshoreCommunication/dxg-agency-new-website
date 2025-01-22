@@ -1,20 +1,20 @@
-import GetAQoute from '@/components/GetAQuote';
-import Testimonial from '@/components/Testimonial';
-import WhyDxg from '@/components/home/WhyDxg';
-import { EventExperienceDesignBannerSection } from '@/components/Sections/EventExperienceDesignBannerSection';
+import GetAQoute from "@/components/GetAQuote";
+import Testimonial from "@/components/Testimonial";
+import WhyDxg from "@/components/home/WhyDxg";
+import { EventExperienceDesignBannerSection } from "@/components/Sections/EventExperienceDesignBannerSection";
 
 export default function EventExperienceDesign() {
   return (
-    <div className='bg-black'>
+    <div className="bg-black">
       <EventExperienceDesignBannerSection />
-      <div className='flex flex-col gap-x-16 md:flex-row md:px-28'>
-        <div className='w-full p-4 md:w-1/2'>
+      <div className="flex flex-col gap-x-16 md:flex-row md:px-28">
+        <div className="w-full p-4 md:w-1/2">
           <p
             style={{
-              color: 'white',
-              paddingTop: '4rem',
-              paddingBottom: '4rem',
-              textAlign: 'justify',
+              color: "white",
+              paddingTop: "4rem",
+              paddingBottom: "4rem",
+              textAlign: "justify",
             }}
           >
             At DXG, we believe that the heart of every memorable event lies in
@@ -32,11 +32,14 @@ export default function EventExperienceDesign() {
             inspires, and leaves a lasting impression on every attendee.
           </p>
         </div>
-        <div className='w-full p-4 md:w-1/2'>
+        <div className="w-full p-4 md:w-1/2">
           <GetAQoute />
         </div>
       </div>
-      <Testimonial />
+      <div className="overflow-hidden">
+        <Testimonial />
+      </div>
+
       <WhyDxg />
     </div>
   );

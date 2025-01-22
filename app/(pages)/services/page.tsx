@@ -24,7 +24,7 @@ export default function Services() {
         }}
       />
       <MaxWidthWrapper>
-        <div className="py-9 lg:py-16">
+        <div className="container  py-9 lg:py-16">
           <MotionDiv
             variants={staggerContainer(0.2, 0.1)}
             initial="hidden"
@@ -55,7 +55,9 @@ export default function Services() {
           </MotionDiv>
         </div>
       </MaxWidthWrapper>
-      <Testimonial />
+      <div className="overflow-hidden">
+        <Testimonial />
+      </div>
       <div className="bg-black">
         <NewsLetter />
       </div>
