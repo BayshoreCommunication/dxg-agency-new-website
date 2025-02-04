@@ -21,7 +21,7 @@ const infos = {
 export default function WeSupport() {
   const [active, setActive] = useState(0);
   return (
-    <div className="mb-10 mt-4 bg-black md:mb-28">
+    <div className="mb-10 mt-4 bg-black md:h-[820px] xl:h-[876px] ">
       <MaxWidthWrapper>
         <div className="flex flex-col  items-end py-5 md:py-10 ">
           <div className=" md:max-w-3xl">
@@ -60,7 +60,7 @@ export default function WeSupport() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            className=" flex   flex-col gap-6 lg:flex-row"
+            className=" flex   flex-col gap-6 lg:flex-row md:pb-28"
           >
             {exploreWorlds.map((world, index) => (
               <ExploreCard
