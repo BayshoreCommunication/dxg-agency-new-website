@@ -23,14 +23,7 @@
 // };
 //
 // export default Page;
-import parse from "html-react-parser";
-import Image from "next/image";
-import BlogWideCard from "@/components/BlogCard/BlogWideCard";
 import postData from "./_getPost";
-import getAllBlogPost from "@/lib/GetAllBlogPost";
-import { MotionDiv } from "@/components/Motion";
-import { fadeIn, staggerContainer } from "@/lib/motion";
-import MotionEffect from "@/components/Animation/MotionEffect";
 import PostBody from "./postBody";
 
 export async function generateMetadata({ params }) {
@@ -39,6 +32,8 @@ export async function generateMetadata({ params }) {
   const posts = await postData;
   //console.log(posts);
   const blogDetails = posts?.data?.find((post) => post.slug === slug);
+
+  console.log('"checkd ata', blogDetails);
 
   return {
     title: blogDetails?.title,
