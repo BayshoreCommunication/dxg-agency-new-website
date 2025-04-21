@@ -17,12 +17,12 @@ const HeroSection = () => {
         <div className="flex flex-col gap-5 py-8 md:py-10 lg:gap-12 lg:py-20">
           <ScrollMotionEffect effect="fade-down" duration="2000">
             {" "}
-            <h1 className=" text-3xl  font-semibold text-white md:text-4xl lg:text-5xl xl:text-8xl xl:font-bold">
+            <h1 className=" text-3xl  font-semibold text-white md:text-4xl lg:text-5xl 2xl:text-8xl xl:font-bold">
               Let{"’"}s{" "}
               <span className=" inline-block bg-[#2DC6F5] px-2  py-1 md:px-8 md:py-5 ">
                 <FaCamera className="text-xl md:text-2xl lg:text-2xl xl:text-3xl" />
               </span>{" "}
-              Make Your AV Production Experience - Easy, Fun, Memorable!
+              Make Your Next AV Production Experience - Easy, Fun, Memorable!
             </h1>
           </ScrollMotionEffect>
 
@@ -58,7 +58,7 @@ const HeroSection = () => {
                     <div className="flex items-center gap-3">
                       {/* <p className="text-4xl font-semibold md:text-6xl">25</p> */}
                       <NumberAnimation
-                        className="text-4xl font-semibold md:text-6xl w-28"
+                        className="text-4xl font-semibold md:text-6xl w-28 text-white"
                         value={25}
                         incrementPlus={1}
                         duration={200}
@@ -70,14 +70,14 @@ const HeroSection = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <NumberAnimation
-                        className="text-4xl font-semibold md:text-6xl w-48"
+                        className="text-4xl font-semibold md:text-6xl w-48 text-white"
                         value={5000}
                         incrementPlus={100}
                         duration={100}
                       />
                       <p className="text-sm opacity-70 md:text-base">
-                        Event
-                        <br /> Handled
+                        Completed
+                        <br /> Projects
                       </p>
                     </div>
                   </div>
