@@ -66,7 +66,7 @@ export const BannerSection = () => {
                   <MotionDiv variants={zoomIn(0.2, 0.5)}>
                     <NumberAnimation
                       className="text-2xl"
-                      value={20}
+                      value={25}
                       incrementPlus={1}
                       duration={200}
                     />
@@ -147,7 +147,7 @@ export const BannerSection = () => {
                         <MotionDiv variants={zoomIn(0.2, 0.5)}>
                           <NumberAnimation
                             className="text-3xl"
-                            value={20}
+                            value={25}
                             incrementPlus={1}
                             duration={200}
                           />
