@@ -54,7 +54,7 @@ export default function Services() {
 
                 <div
                   key={index}
-                  className="min-h-[320px]  flex-1 justify-center overflow-hidden border  bg-cover bg-center bg-no-repeat  rounded-xl duration-500 md:rounded-[30px]"
+                  className="min-h-[300px] 2xl:min-h-[400px]  flex-1 justify-center overflow-hidden   bg-cover bg-center bg-no-repeat  rounded-xl duration-500 md:rounded-[35px]"
                   style={{ backgroundImage: `url('${item.image}')` }}
                 >
                   <Link href={`${item.url}`}>
