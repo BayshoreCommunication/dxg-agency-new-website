@@ -11,6 +11,7 @@ import { fadeIn, zoomIn } from "@/lib/motion";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="">
       <footer
@@ -283,7 +284,8 @@ export default function Footer() {
         {/* Second Row */}
         <div className="flex h-[80px] flex-col justify-center">
           <div className="text-center text-xs text-white">
-            ©2024 Digital Xperience Group (DXG) ®All Rights Reserved. <br />
+            ©{currentYear} Digital Xperience Group (DXG) ® All Rights Reserved.{" "}
+            <br />
             Design & Developed by{" "}
             <Link
               className="text-brand"

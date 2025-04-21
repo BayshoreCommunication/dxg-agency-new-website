@@ -42,36 +42,43 @@ export default function Services() {
               text={infos.description}
             />
           </div>
-          <div className="flex flex-col md:flex-row">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 xl:gap-6">
             {SERVICE_DATA.map((item, index) => {
               return (
-                <MotionDiv
-                  variants={fadeIn("right", "tween", index * 0.2, 0.75)}
+                // <MotionDiv
+                //   variants={fadeIn("right", "tween", index * 0.2, 0.75)}
+                //   key={index}
+                //   className={`min-h-[200px] flex-1 justify-center overflow-hidden border border-gray-400 bg-cover bg-center bg-no-repeat md:min-h-[420px]`}
+                //   style={{ backgroundImage: `url('${item.image}')` }}
+                // ></MotionDiv>
+
+                <div
                   key={index}
-                  className={`min-h-[200px] flex-1 justify-center overflow-hidden border border-gray-400 bg-cover bg-center bg-no-repeat md:min-h-[420px]`}
+                  className="min-h-[320px] xl:min-h-[420px] flex-1 justify-center overflow-hidden border border-gray-400 bg-cover bg-center bg-no-repeat rounded-md lg:rounded-2xl"
                   style={{ backgroundImage: `url('${item.image}')` }}
                 >
                   <Link href={`${item.url}`}>
-                    <div
-                      className={`group relative  bg-black bg-opacity-50 transition delay-100 animate-in hover:bg-sky-700 hover:bg-opacity-80`}
-                    >
-                      <div className="flex flex-row items-center justify-between px-10 group-hover:hidden md:flex-col ">
-                        <div className="flex min-h-[200px] transform flex-col items-start justify-center md:min-h-[420px] md:-rotate-90 ">
-                          {item.heading.split(";").map((word, index) => {
-                            return (
-                              <div key={index} className="">
-                                <h2 className="text-xl font-bold uppercase text-white">
-                                  {word}
-                                </h2>
-                              </div>
-                            );
-                          })}
-                        </div>
-                        <div className="flex justify-center">
-                          <Icons.customArrowUp className="flex h-20 w-20  items-center justify-center  pb-5 text-white" />
+                    <div className="group relative h-full w-full bg-black bg-opacity-50 transition duration-300 hover:bg-sky-700 hover:bg-opacity-80">
+                      {/* Before Hover */}
+                      <div className="absolute inset-0 z-10 flex h-full w-full items-end justify-between px-10 py-10 group-hover:hidden ">
+                        <div className="flex items-center justify-between gap-2 w-full">
+                          <div>
+                            {item.heading.split(";").map((word, idx) => (
+                              <h2
+                                key={idx}
+                                className="text-xl font-bold uppercase text-white"
+                              >
+                                {word}
+                              </h2>
+                            ))}
+                          </div>
+                          <div className="flex justify-center">
+                            <Icons.customArrowUp className="h-14 w-14  text-white" />
+                          </div>
                         </div>
                       </div>
 
+                      {/* On Hover */}
                       <MotionDiv
                         transition={{
                           duration: 0.4,
@@ -80,14 +87,14 @@ export default function Services() {
                           staggerChildren: 0.5,
                           staggerDirection: -1,
                         }}
-                        className="fadeInAnimation hidden  flex-row px-5 group-hover:flex md:flex-col"
+                        className="absolute inset-0 z-20 hidden h-full w-full flex-col p-7 lg:p-10 group-hover:flex items-end"
                       >
-                        <MotionDiv className="min-h-[300px] pt-10 md:min-h-[420px]">
+                        <MotionDiv className=" h-full">
                           <h2 className="text-xl font-bold uppercase text-white">
                             {item.title}
                           </h2>
                           <p
-                            className=" mt-3 h-full text-base text-white"
+                            className="mt-3 text-base text-white"
                             style={{
                               wordWrap: "break-word",
                               overflow: "hidden",
@@ -104,18 +111,18 @@ export default function Services() {
                           </p>
                         </MotionDiv>
                         <MotionDiv
-                          className="flex justify-center pt-12 md:pt-0"
+                          className="flex justify-center pt-5"
                           initial="hidden"
                           animate="visible"
                           variants={iconVariants}
                           transition={{ duration: 0.5 }}
                         >
-                          <Icons.customRightArrow className="h-20 w-20  pb-5 text-white " />
+                          <Icons.customRightArrow className="h-14 w-14 duration-500 text-white" />
                         </MotionDiv>
                       </MotionDiv>
                     </div>
                   </Link>
-                </MotionDiv>
+                </div>
               );
             })}
           </div>
