@@ -54,7 +54,7 @@ export default function Services() {
 
                 <div
                   key={index}
-                  className="min-h-[280px]  flex-1 justify-center overflow-hidden border border-gray-400 bg-cover bg-center bg-no-repeat  rounded-xl duration-500 md:rounded-[30px]"
+                  className="min-h-[320px]  flex-1 justify-center overflow-hidden border  bg-cover bg-center bg-no-repeat  rounded-xl duration-500 md:rounded-[30px]"
                   style={{ backgroundImage: `url('${item.image}')` }}
                 >
                   <Link href={`${item.url}`}>
@@ -111,7 +111,7 @@ export default function Services() {
                           </p>
                         </MotionDiv>
                         <MotionDiv
-                          className="flex justify-center pt-5"
+                          className="flex justify-center pt-4"
                           initial="hidden"
                           animate="visible"
                           variants={iconVariants}
