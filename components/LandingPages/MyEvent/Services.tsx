@@ -54,19 +54,19 @@ export default function Services() {
 
                 <div
                   key={index}
-                  className="min-h-[350px] flex-1 justify-center overflow-hidden border border-gray-400 bg-cover bg-center bg-no-repeat  rounded-xl duration-500 md:rounded-[30px]"
+                  className="min-h-[280px]  flex-1 justify-center overflow-hidden border border-gray-400 bg-cover bg-center bg-no-repeat  rounded-xl duration-500 md:rounded-[30px]"
                   style={{ backgroundImage: `url('${item.image}')` }}
                 >
                   <Link href={`${item.url}`}>
                     <div className="group relative h-full w-full bg-black bg-opacity-50 transition duration-300 hover:bg-sky-700 hover:bg-opacity-80">
                       {/* Before Hover */}
-                      <div className="absolute inset-0 z-10 flex h-full w-full items-end justify-between px-10 py-10 group-hover:hidden ">
+                      <div className="absolute inset-0 z-10 flex h-full w-full items-end justify-between px-6 py-6 xl:px-10 xl:py-10 group-hover:hidden ">
                         <div className="flex items-center justify-between gap-2 w-full">
                           <div>
                             {item.heading.split(";").map((word, idx) => (
                               <h2
                                 key={idx}
-                                className="text-xl font-bold uppercase text-white"
+                                className="font-semibold  md:text-2xl 2xl:text-3xl uppercase text-white"
                               >
                                 {word}
                               </h2>
@@ -87,10 +87,10 @@ export default function Services() {
                           staggerChildren: 0.5,
                           staggerDirection: -1,
                         }}
-                        className="absolute inset-0 z-20 hidden h-full w-full flex-col p-7 lg:p-10 group-hover:flex items-end"
+                        className="absolute inset-0 z-20 hidden h-full w-full flex-col p-6 lg:p-10 group-hover:flex items-end"
                       >
                         <MotionDiv className=" h-full">
-                          <h2 className="text-xl font-bold uppercase text-white">
+                          <h2 className="font-semibold  md:text-2xl 2xl:text-3xl uppercase text-white">
                             {item.title}
                           </h2>
                           <p
