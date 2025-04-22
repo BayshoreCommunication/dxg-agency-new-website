@@ -115,7 +115,7 @@ export default function OurEventGallery() {
                         className={`${activeIndex === index ? " w-full " : ""}`}
                       />
                     </div>
-
+                    {/* 
                     <div
                       className={`absolute bottom-0 flex w-full items-start justify-start bg-black/40 p-4 text-white duration-500 ${
                         activeIndex === index ? "pb-9" : ""
@@ -129,7 +129,7 @@ export default function OurEventGallery() {
                           {item.subtitle}
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                     {/* <div
                       className={`absolute bottom-0 flex w-full items-start justify-start bg-black/40 p-6 text-white duration-500 ${
                         activeIndex === index
