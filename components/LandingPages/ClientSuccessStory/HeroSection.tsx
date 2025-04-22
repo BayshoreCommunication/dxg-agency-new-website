@@ -18,8 +18,8 @@ const HeroSection = () => {
             <div className="relative z-10 ">
               {" "}
               <ScrollMotionEffect effect="fade-right" duration="1000">
-                <h1 className="max-w-5xl text-center text-5xl font-black text-white drop-shadow-lg md:text-8xl lg:text-[160px] ">
-                  Discover
+                <h1 className=" text-center  text-3xl  font-semibold text-white md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl xl:font-bold   ">
+                  Engage, Exchange, Enlight
                 </h1>
               </ScrollMotionEffect>
             </div>
@@ -38,8 +38,8 @@ const HeroSection = () => {
           </div>
           <ScrollMotionEffect effect="fade-right" duration="2000">
             {" "}
-            <p className="text-center text-2xl  font-medium text-white md:text-5xl">
-              How we create unforgettable events
+            <p className="text-center text-2xl  font-medium text-white md:text-3xl xl:text-4xl">
+              How we create easy, fun and memorable event experiences
             </p>
           </ScrollMotionEffect>
         </div>

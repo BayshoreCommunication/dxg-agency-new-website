@@ -70,17 +70,21 @@ export default function TestimonialSliderTwo() {
             );
           })}
         </Swiper>
-        <div className="md:hidden text-white -translate-y-10 scale-150 bottom-0 -translate-x-1/4">
-          <Icons.rightArrow className="text-white   stroke-[#2dc6f5]  swiper-button-next translate-y-10 md:-translate-y-10 md:scale-150 " />
-        </div>
-        <div className="md:hidden text-white -translate-y-10 scale-150 translate-x-1/4 ">
-          <Icons.leftArrow className="text-white   stroke-[#2dc6f5]  swiper-button-prev md:translate-y-5 md:scale-150 md:-translate-x-2" />
-        </div>
+
+        {/* 1 */}
+        {/* <div className="md:hidden text-white -translate-y-10 scale-150 bottom-0 -translate-x-1/4">
+            <Icons.rightArrow className="text-white   stroke-[#2dc6f5]  swiper-button-next translate-y-10 md:-translate-y-10 md:scale-150 " />
+          </div>
+          <div className="md:hidden text-white -translate-y-10 scale-150 translate-x-1/4 ">
+            <Icons.leftArrow className="text-white   stroke-[#2dc6f5]  swiper-button-prev md:translate-y-5 md:scale-150 md:-translate-x-2" />
+          </div> */}
+
+        {/* 2 */}
         <div className="hidden md:block text-white scale-150 absolute right-0 top-1/2 -translate-y-10 xl:-translate-y-20 ">
           <Icons.rightArrow className="text-white stroke-[#2dc6f5]  swiper-button-next scale-150" />
         </div>
-        <div className="hidden md:block  text-white scale-150 absolute  right-0 bottom-1/2 translate-y-10 ">
-          <Icons.leftArrow className="text-white  stroke-[#2dc6f5]  swiper-button-prev scale-150 -translate-x-2.5" />
+        <div className="hidden md:block  text-white scale-150 absolute  right-0 bottom-1/2 translate-y-10 -translate-x-[70px]">
+          <Icons.leftArrow className="text-white  stroke-[#2dc6f5]  swiper-button-prev scale-150 " />
         </div>
       </div>
       <div className="absolute top-[-12%] md:top-[-30%] lg:left-[20%] lg:top-[0%] xl:left-[15%] xl:top-[-15%] ">

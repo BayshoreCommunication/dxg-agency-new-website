@@ -17,7 +17,7 @@ const page = () => {
       <div className="overflow-hidden">
         <Testimonial />
       </div>
-      <OurSuccessfulEvents />
+      {/* <OurSuccessfulEvents /> */}
       <NewsLetter />
     </div>
   );

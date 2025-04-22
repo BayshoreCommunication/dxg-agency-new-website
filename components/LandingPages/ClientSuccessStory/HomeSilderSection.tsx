@@ -32,6 +32,7 @@ const HomeSilderSection: React.FC = () => {
           cssMode={true}
           mousewheel={true}
           keyboard={true}
+          loop={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
