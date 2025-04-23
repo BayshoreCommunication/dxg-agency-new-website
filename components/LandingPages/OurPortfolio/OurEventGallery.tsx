@@ -61,6 +61,7 @@ const keyServiceData = [
 export default function OurEventGallery() {
   // Set activeIndex to accept either a number or null
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   return (
     <div className="md:mb10 mb-6 bg-black lg:mb-20">
       <MaxWidthWrapper>
@@ -81,87 +82,47 @@ export default function OurEventGallery() {
           {/* Our Event Gallery */}
 
           {/* Key Services Card */}
-          <div className="flex h-full flex-col items-stretch overflow-hidden lg:max-h-[400px] lg:flex-row">
+          <div className="flex flex-col lg:flex-row h-full overflow-hidden">
             {keyServiceData.map((item, index) => (
               <div
                 key={index}
-                className={`group relative overflow-hidden duration-500 ${
-                  activeIndex === index ? "h-full w-[100%] max-w-2xl" : ""
+                className={`group relative flex-1 transition-all duration-500 overflow-hidden ${
+                  activeIndex === index ? "lg:flex-[2]" : "lg:flex-[1]"
                 }`}
                 onMouseEnter={() => setActiveIndex(index)}
+                // Remove this to keep one always active
+                // onMouseLeave={() => setActiveIndex(null)}
               >
                 <ScrollMotionEffect effect="fade-up" duration="2000">
-                  <div>
-                    {/* mobile */}
-                    <div className="block max-h-[400px] lg:hidden">
-                      <Image
-                        // src={item.img}
-                        src={item.img}
-                        alt={item.title}
-                        width={295}
-                        height={460}
-                        className=" w-full bg-cover"
-                      />
-                    </div>
-                    {/* desktop */}
-
-                    <div className="hidden lg:block">
-                      <Image
-                        // src={item.img}
-                        src={activeIndex === index ? item.activeImg : item.img}
-                        alt={item.title}
-                        width={activeIndex === index ? 740 : 295}
-                        height={460}
-                        className={`${activeIndex === index ? " w-full " : ""}`}
-                      />
-                    </div>
-                    {/* 
-                    <div
-                      className={`absolute bottom-0 flex w-full items-start justify-start bg-black/40 p-4 text-white duration-500 ${
-                        activeIndex === index ? "pb-9" : ""
-                      }`}
-                    >
-                      <div>
-                        <h3 className="mb-1 text-start text-lg font-medium 2xl:text-xl">
-                          {item.title}
-                        </h3>
-                        <p className="font-light text-white opacity-70">
-                          {item.subtitle}
-                        </p>
-                      </div>
-                    </div> */}
-                    {/* <div
-                      className={`absolute bottom-0 flex w-full items-start justify-start bg-black/40 p-6 text-white duration-500 ${
-                        activeIndex === index
-                          ? 'visible top-0 opacity-100'
-                          : 'invisible top-full opacity-0'
-                      }`}
-                    >
-                      <div>
-                        <h3 className='text-start text-xl font-semibold md:text-2xl'>
-                          {item.title}
-                        </h3>
-                        <p className='font-light text-white opacity-70'>
-                          {item.subtitle}
-                        </p>
-                        <p className='mt-2 text-start text-base opacity-70 2xl:text-xl'>
-                          {item.desc}
-                        </p>
-                      </div>
-                    </div> */}
+                  {/* Mobile view */}
+                  <div className="block lg:hidden h-[460px] w-full relative">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      sizes="100vw"
+                      className="object-cover"
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                      }}
+                    />
                   </div>
+
+                  {/* Desktop view */}
+                  <div
+                    className="hidden lg:block h-[400px] w-full transition-all duration-500 ease-in-out  bg-no-repeat "
+                    style={{
+                      backgroundImage: `url('${
+                        activeIndex === index ? item.activeImg : item.img
+                      }')`,
+                    }}
+                  />
                 </ScrollMotionEffect>
               </div>
             ))}
           </div>
-          {/* <div className='flex justify-center'>
-            <Button
-              className={`capsule-hover capsule-button w-full max-w-60 rounded-full bg-brand px-5 py-2 font-semibold text-white`}
-              variant='link'
-            >
-              Submit
-            </Button>
-          </div> */}
         </MotionDiv>
       </MaxWidthWrapper>
     </div>
