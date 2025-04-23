@@ -17,7 +17,7 @@ const HeroSection = () => {
           <ScrollMotionEffect effect="fade-down-right" duration="2000">
             {" "}
             {/* <h1 className='max-w-5xl text-center text-5xl font-bold text-white md:text-6xl lg:text-8xl'> */}
-            <h1 className=" text-3xl  font-semibold text-white md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl xl:font-bold max-w-screen-lg text-center">
+            <h1 className=" max-w-5xl text-center text-5xl font-bold text-white md:text-6xl lg:text-8xl">
               Explore Our Custom Event{" "}
               <span className="relative">
                 Solutions{" "}
