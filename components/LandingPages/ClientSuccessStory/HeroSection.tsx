@@ -23,7 +23,7 @@ const HeroSection = () => {
                 </h1>
               </ScrollMotionEffect>
             </div>
-            <div className="absolute left-1/2 top-1/2 z-0 w-full max-w-[30%] -translate-x-1/2 -translate-y-1/2  opacity-70">
+            <div className="absolute left-1/2 top-1/2 z-0 w-full max-w-[30%]  flex justify-center -translate-x-1/2 -translate-y-1/2  opacity-70">
               <ScrollMotionEffect effect="zoom-in" duration="1500">
                 {" "}
                 <Image
