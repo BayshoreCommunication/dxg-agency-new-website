@@ -18,7 +18,7 @@ const HeroSection = () => {
             <div className="relative z-10 ">
               {" "}
               <ScrollMotionEffect effect="fade-right" duration="1000">
-                <h1 className=" text-center  text-3xl  font-semibold text-white md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl xl:font-bold   ">
+                <h1 className=" max-w-7xl text-center text-5xl font-bold text-white md:text-6xl lg:text-8xl  ">
                   Engage, Exchange, Enlight
                 </h1>
               </ScrollMotionEffect>

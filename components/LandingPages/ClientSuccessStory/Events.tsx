@@ -23,7 +23,7 @@ const Events = () => {
           <div
             className="w-full  bg-cover bg-center"
             style={{
-              backgroundImage: `url('/landing-pages/client-success-story/event-3.jpg')`,
+              backgroundImage: `url('/landing-pages/client-success-story/event-bg.png')`,
             }}
           >
             <div className="p-4">
@@ -36,16 +36,20 @@ const Events = () => {
         <div className="hidden lg:block">
           <div className="flex items-stretch">
             {/* Single Card */}
-            <div className="relative w-[25%] overflow-hidden">
+            <div className="relative w-full  overflow-hidden">
               <Image
-                src="/landing-pages/client-success-story/event-1.jpg"
+                src="/landing-pages/client-success-story/event-bg.png"
                 alt=""
-                width={350}
+                width={1920}
                 height={600}
-                className="w-full"
+                className="w-full "
               ></Image>
+              {/* Right-to-Left Overlay */}
+              <div className="absolute inset-0 z-10 bg-gradient-to-l from-black/90 via-black/10 to-transparent"></div>
+
               {/* Social Media */}
-              <div className="absolute bottom-0 ">
+
+              {/* <div className="absolute bottom-0 ">
                 <ScrollMotionEffect effect="fade-right" duration="2000">
                   {" "}
                   <div className=" flex w-full items-end gap-3 p-10">
@@ -77,27 +81,7 @@ const Events = () => {
                     </div>
                   </div>
                 </ScrollMotionEffect>
-              </div>
-            </div>
-            <div className="w-[25%]">
-              <Image
-                src="/landing-pages/client-success-story/event-2.jpg"
-                alt=""
-                width={350}
-                height={600}
-                className="w-full"
-              ></Image>
-            </div>
-            <div className="relative w-[50%]">
-              <Image
-                src="/landing-pages/client-success-story/event-3.jpg"
-                alt="home-banner-bg"
-                layout="fill"
-                objectFit="cover"
-                priority
-                className="z-10"
-                rel="preload"
-              />
+              </div> */}
 
               <div className="absolute  right-20 top-1/2 z-20  max-w-2xl -translate-y-1/2 transform">
                 <ScrollMotionEffect effect="fade-left" duration="2000">

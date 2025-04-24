@@ -11,10 +11,10 @@ const page = () => {
       {/* Components */}
       <NoOfferHeroSection />
       {/* <HeroSection /> */}
-      {/* <ExclusiveOffer />
+      <ExclusiveOffer />
       <NewsLetter />
       <CallToAction />
-      <LimitedTimeOffer /> */}
+      <LimitedTimeOffer />
     </div>
   );
 };
