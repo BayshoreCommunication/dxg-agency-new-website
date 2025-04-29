@@ -40,14 +40,14 @@ export default function RootLayout({
     <html lang="en" className="h-full scroll-smooth bg-black font-sans">
       <body
         className={cn(
-          "relative h-full overflow-x-hidden font-sans antialiased",
+          "relative min-h-full font-sans antialiased" // Removed overflow-x-hidden here
         )}
       >
-        <Navbar />
-        <main className="relative flex min-h-screen flex-col">
-          <div className="flex-1 flex-grow bg-black">{children}</div>
-        </main>
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-1 bg-black">{children}</main>
+          <Footer />
+        </div>
         <TailwindIndicator />
       </body>
     </html>

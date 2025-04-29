@@ -80,10 +80,10 @@ export default function TestimonialSliderTwo() {
           </div> */}
 
         {/* 2 */}
-        <div className="hidden md:block text-white scale-150 absolute right-0 top-1/2 -translate-y-10 xl:-translate-y-20 ">
+        <div className="hidden lg:block text-white scale-150 absolute right-0 top-1/2 -translate-y-10 xl:-translate-y-20 ">
           <Icons.rightArrow className="text-white stroke-[#2dc6f5]  swiper-button-next scale-150" />
         </div>
-        <div className="hidden md:block  text-white scale-150 absolute  right-0 bottom-1/2 translate-y-10 -translate-x-[70px]">
+        <div className="hidden lg:block  text-white scale-150 absolute  right-0 bottom-1/2 translate-y-10 -translate-x-[70px]">
           <Icons.leftArrow className="text-white  stroke-[#2dc6f5]  swiper-button-prev scale-150 " />
         </div>
       </div>

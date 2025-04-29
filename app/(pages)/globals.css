@@ -170,9 +170,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition:
-    background-color 0.5s ease-in-out,
-    box-shadow 0.1s ease-in-out;
+  transition: background-color 0.5s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .subscribe-button::before {
@@ -200,9 +198,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition:
-    background-color 0.5s ease-in-out,
-    box-shadow 0.1s ease-in-out;
+  transition: background-color 0.5s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .capsule-button::before {
@@ -237,9 +233,7 @@
   background: radial-gradient(circle, transparent 1%, black 1%);
   background-size: 150% 150%;
   background-position: center;
-  transition:
-    background-size 0.5s,
-    background-position 0.5s;
+  transition: background-size 0.5s, background-position 0.5s;
 }
 
 .glow-card:hover {
@@ -252,10 +246,7 @@
 }
 
 .glowing-border:hover {
-  box-shadow:
-    inset 0 0 30px #fff,
-    inset 0 0 10px #fff,
-    inset 0 0 40px #fff,
+  box-shadow: inset 0 0 30px #fff, inset 0 0 10px #fff, inset 0 0 40px #fff,
     inset 0 0 50px #fff;
   background-color: rgba(0, 255, 255, 0.1);
 }
@@ -572,21 +563,9 @@ body {
   /* fix text transition issue for .left and .right but need to overwrite left and right properties in .right */
   width: 100%;
 
-  -moz-transition:
-    top 0.3s,
-    right 0.3s,
-    bottom 0.3s,
-    left 0.3s;
-  -webkit-transition:
-    top 0.3s,
-    right 0.3s,
-    bottom 0.3s,
-    left 0.3s;
-  transition:
-    top 0.3s,
-    right 0.3s,
-    bottom 0.3s,
-    left 0.3s;
+  -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
 }
 .item-overlay.right {
   right: 200%;
@@ -614,7 +593,6 @@ body {
 
 .zf_lB_Container_74722 {
   position: fixed;
-
   margin: 0;
   margin-right: 0px;
   padding: 0;
