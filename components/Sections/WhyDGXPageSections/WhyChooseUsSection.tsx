@@ -36,7 +36,7 @@ export const WhyChooseUsSection = () => {
                 className="absolute right-4 top-[-16px] flex h-16 w-12 flex-col items-center justify-center bg-brand md:right-10 md:top-[-24px] md:h-14 md:w-12"
               >
                 <h2 className="md:text-md text-center font-bold leading-none text-white">
-                  20+
+                  25+
                 </h2>
 
                 <h2 className="md:text-md text-center font-light leading-none text-white">
