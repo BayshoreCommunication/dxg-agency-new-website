@@ -8,7 +8,7 @@ const HomeLogoLoop = () => {
       <>
         <Marquee pauseOnHover={true} speed={60}>
           <div>
-            <div className="flex items-center gap-14 px-7 mt-4 bg-white py-3 ">
+            <div className="flex items-center gap-14 px-7 mt-4 bg-white py-3 overflow-hidden ">
               <Image
                 src="/landing-pages/my-event/clients/logo-1.png"
                 alt="photoshop"
