@@ -82,12 +82,40 @@ export default function OurEventGallery() {
           {/* Our Event Gallery */}
 
           {/* Key Services Card */}
-          <div className="flex flex-col lg:flex-row h-full overflow-hidden">
+          {/* Desktop view */}
+          <div className="flex flex-col lg:flex-row h-full overflow-hidden lg:hidden ">
+            {keyServiceData.map((item, index) => (
+              <div
+                key={index}
+                className={`group relative flex-1 transition-all duration-500 overflow-hidden `}
+
+                // Remove this to keep one always active
+                // onMouseLeave={() => setActiveIndex(null)}
+              >
+                <ScrollMotionEffect effect="fade-up" duration="2000">
+                  {/* Mobile view */}
+                  <div className="w-full relative">
+                    <Image
+                      src={item.activeImg}
+                      alt={item.title}
+                      width={1920}
+                      height={1080}
+                      className="w-full"
+                    />
+                  </div>
+                </ScrollMotionEffect>
+              </div>
+            ))}
+          </div>
+          {/* Desktop view */}
+          <div className="hidden lg:flex flex-col lg:flex-row h-full overflow-hidden">
             {keyServiceData.map((item, index) => (
               <div
                 key={index}
                 className={`group relative flex-1 transition-all duration-500 overflow-hidden ${
-                  activeIndex === index ? "lg:flex-[2]" : "lg:flex-[1]"
+                  activeIndex === index
+                    ? "lg:flex-[4.5] xl:flex[3]"
+                    : "lg:flex-[1] xl:flex-[2]"
                 }`}
                 onMouseEnter={() => setActiveIndex(index)}
                 // Remove this to keep one always active

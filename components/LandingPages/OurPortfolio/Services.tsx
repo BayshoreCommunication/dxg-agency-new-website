@@ -542,7 +542,7 @@ export default function Services() {
                           className="absolute inset-0 z-20 hidden h-full w-full flex-col p-6 lg:p-10 group-hover:flex items-end"
                         >
                           <MotionDiv className=" h-full">
-                            <h2 className="font-semibold  md:text-xl 2xl:text-2xl uppercase text-white">
+                            <h2 className="font-semibold text-base  xl:text-xl 2xl:text-2xl uppercase text-white">
                               {item.title}
                             </h2>
                             <p

@@ -10,7 +10,7 @@
 //           {/* First Name */}
 //           <div className=' w-full'>
 //             <input
-//               className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black'
+//               className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black'
 //               placeholder='Name'
 //               required
 //               autoComplete='off'
@@ -22,7 +22,7 @@
 //           {/* Phone Number */}
 //           <div className=' w-full'>
 //             <input
-//               className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black'
+//               className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black'
 //               placeholder='Phone'
 //               required
 //               autoComplete='off'
@@ -36,7 +36,7 @@
 //           {/* Date */}
 //           <div className='w-full'>
 //             <input
-//               className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base '
+//               className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base '
 //               placeholder='Select a date'
 //               required
 //               autoComplete='off'
@@ -51,7 +51,7 @@
 //           <div className=' w-full'>
 //             <select
 //               id='countries'
-//               className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-3 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black'
+//               className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-3 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black'
 //               required
 //               autoComplete='off'
 //               name='caseType'
@@ -79,7 +79,7 @@
 //         {/* Email */}
 //         <div className='mb-5'>
 //           <input
-//             className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black'
+//             className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black'
 //             placeholder="What's your email"
 //             required
 //             autoComplete='off'
@@ -94,7 +94,7 @@
 //           <textarea
 //             rows={4}
 //             id='message'
-//             className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black'
+//             className='block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black'
 //             placeholder='Please describe what happened'
 //             required
 //             autoComplete='off'
@@ -128,7 +128,7 @@ const ContactSection = () => {
           {/* Name */}
           <div className="w-full">
             <input
-              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black"
+              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black"
               placeholder="Name"
               required
               autoComplete="off"
@@ -140,7 +140,7 @@ const ContactSection = () => {
           {/* Phone Number */}
           <div className="w-full">
             <input
-              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black"
+              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black"
               placeholder="Phone"
               required
               autoComplete="off"
@@ -155,7 +155,7 @@ const ContactSection = () => {
           {/* Date */}
           {/* <div className="w-full">
             <input
-              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base"
+              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base"
               placeholder="Select a date"
               required
               autoComplete="off"
@@ -166,7 +166,7 @@ const ContactSection = () => {
           </div> */}
           <div className="relative w-full">
             <input
-              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 pr-15 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black"
+              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 pr-15 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black"
               placeholder="Select a date"
               required
               autoComplete="off"
@@ -183,29 +183,52 @@ const ContactSection = () => {
           </div>
 
           {/* Event Type */}
-          <div className="w-full">
+          <div className="relative w-full">
             <select
-              className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-3 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black"
+              className="block w-full appearance-none rounded-md border border-gray-700 bg-gray-900 p-2.5 py-3 pl-5 pr-10 text-lg text-gray-300 focus:border-black focus:ring-black"
               required
               autoComplete="off"
               name="caseType"
             >
-              <option className="text-base" value="">
-                - Event Type -
+              <option value="" selected>
+                Event Type -
               </option>
-              <option className="text-base" value="event-1">
-                Event 1
+              <option value="conference">Conference / Convention</option>
+              <option value="corporate-meeting">
+                Corporate Meeting / Town Hall
               </option>
-              <option className="text-base" value="event-2">
-                Event 2
+              <option value="product-launch">
+                Product Launch / Brand Activation
               </option>
-              <option className="text-base" value="event-3">
-                Event 3
+              <option value="trade-show">Trade Show / Expo Booth</option>
+              <option value="awards-show">Awards Show / Gala</option>
+              <option value="virtual-event">Virtual or Hybrid Event</option>
+              <option value="training">Training / Workshop / Seminar</option>
+              <option value="fundraiser">Fundraiser / Nonprofit Event</option>
+              <option value="broadcast">
+                Broadcast / Livestream Production
               </option>
-              <option className="text-base" value="event-4">
-                Event 4
-              </option>
+              <option value="concert">Concert / Performance / Festival</option>
+              <option value="other">Other (Please Specify)</option>
             </select>
+
+            {/* Custom arrow */}
+            <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+
             <span className="text-primary"></span>
           </div>
         </div>
@@ -213,8 +236,8 @@ const ContactSection = () => {
         {/* Email */}
         <div className="mb-5">
           <input
-            className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black"
-            placeholder="What's your email"
+            className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black"
+            placeholder="Put email address"
             required
             autoComplete="off"
             type="email"
@@ -227,8 +250,8 @@ const ContactSection = () => {
         <div className="mb-5">
           <textarea
             rows={4}
-            className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-500 placeholder:text-base focus:border-black focus:ring-black"
-            placeholder="Please describe what happened"
+            className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black"
+            placeholder="Tell us more about your event"
             required
             autoComplete="off"
             name="message"
@@ -242,7 +265,7 @@ const ContactSection = () => {
             Attach a document (PDF, Word, etc.)
           </label>
           <input
-            className="block w-full cursor-pointer rounded-md border border-gray-700 bg-gray-900 text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-brand file:px-4 file:py-2 file:text-white file:font-semibold hover:file:cursor-pointer focus:outline-none"
+            className="block w-full cursor-pointer rounded-md border border-gray-700 bg-gray-900 text-gray-300 file:mr-4 file:rounded-md file:border-0 file:bg-brand file:px-4 file:py-2 file:text-white file:font-semibold hover:file:cursor-pointer focus:outline-none"
             type="file"
             name="attachment"
             accept=".pdf,.doc,.docx,.txt,.rtf"
