@@ -19,9 +19,9 @@ const HeroSection = () => {
             {" "}
             <h1 className=" text-3xl  font-semibold text-white md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl xl:font-bold">
               Let{"’"}s{" "}
-              <span className=" inline-block bg-[#2DC6F5] px-2  py-1 md:px-8 md:py-5 ">
+              {/* <span className=" inline-block bg-[#2DC6F5] px-2  py-1 md:px-8 md:py-5 ">
                 <FaCamera className="text-xl md:text-2xl lg:text-2xl xl:text-3xl" />
-              </span>{" "}
+              </span>{" "} */}
               Make Your Next AV Production Experience - Easy, Fun, Memorable!
             </h1>
           </ScrollMotionEffect>

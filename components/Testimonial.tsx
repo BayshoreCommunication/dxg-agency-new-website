@@ -8,8 +8,7 @@ import HomeTestimonialSlider from "./HomeTestimonialSlider";
 
 const infos = {
   title: "Client Testimonials",
-  description:
-    "Dive into the transformative experiences of our satisfied clients! Their words paint a vivid picture of the high-quality work we deliver and our dedication to propelling you towards your goals.",
+  description: `The organizations below trusted DXG's expertise, precise execution, and proactive collaboration to elevate their event experience.`,
 };
 
 function Testimonial() {

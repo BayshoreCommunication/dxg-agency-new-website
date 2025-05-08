@@ -32,12 +32,14 @@ const keyServiceData = [
     desc: `Our planning process is thorough and collaborative, involving state-of-the-art technology and innovative solutions to meet and exceed your expectations. With us, you're not just hosting an event but crafting an experience.`,
   },
   {
-    img: "/landing-pages/my-event/personal-celebrations.jpg",
+    img: "/landing-pages/my-event/corporate-events.jpg",
+    // img: "/landing-pages/my-event/personal-celebrations.jpg",
     title: "Expert Team",
     desc: `Our planning process is thorough and collaborative, involving state-of-the-art technology and innovative solutions to meet and exceed your expectations. With us, you're not just hosting an event but crafting an experience.`,
   },
   {
-    img: "/landing-pages/my-event/custom-event-solutions.jpg",
+    img: "/landing-pages/my-event/corporate-events.jpg",
+    // img: "/landing-pages/my-event/custom-event-solutions.jpg",
     title: "Customer Satisfaction",
     desc: `Our planning process is thorough and collaborative, involving state-of-the-art technology and innovative solutions to meet and exceed your expectations. With us, you're not just hosting an event but crafting an experience.`,
   },
