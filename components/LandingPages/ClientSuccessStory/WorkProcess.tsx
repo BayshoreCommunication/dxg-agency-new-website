@@ -11,10 +11,6 @@ const WorkProcess = () => {
         <div className="grid grid-cols-1 gap-6 lg:gap-10 md:grid-cols-2">
           <div>
             <ScrollMotionEffect effect="fade-right" duration="2000">
-              <p className="text-base text-[#2DC6F5] md:text-xl">
-                Who We Support - 3 P’s of Partnership
-              </p>
-
               <h2 className="mb-4 mt-2 text-3xl uppercase text-white md:mb-6 md:text-4xl lg:text-6xl">
                 THERE IS A METHOD TO THE MADNESS.
               </h2>

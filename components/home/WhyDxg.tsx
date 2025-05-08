@@ -40,7 +40,7 @@ const WHY_DXG_DATA = [
 
 export default function WhyDxg() {
   return (
-    <div className="h-full w-full bg-[url('/bgWhyDxg.png')] bg-cover bg-center bg-no-repeat">
+    <div className="h-full w-full ">
       <div className="bg-black bg-opacity-60">
         <MaxWidthWrapper>
           <div className="mx-auto flex max-w-3xl flex-col items-center justify-center">
