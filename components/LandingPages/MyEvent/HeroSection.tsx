@@ -28,9 +28,8 @@ const HeroSection = () => {
 
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10 lg:gap-16">
             {/*  */}
-            <ScrollMotionEffect effect="fade-right" duration="2000">
-              {/* Problem on this image */}
-              {/* <div>
+            {/* <ScrollMotionEffect effect="fade-right" duration="2000">
+              <div>
                 <Image
                   src="/landing-pages/my-event/hero-img-1.jpg"
                   alt="hero image"
@@ -38,7 +37,7 @@ const HeroSection = () => {
                   height={600}
                   className="w-full"
                 ></Image>
-              </div> */}
+              </div>
               <div className="relative w-full h-[500px]">
                 <Image
                   src="/landing-pages/my-event/hero-img-1.jpg"
@@ -48,7 +47,7 @@ const HeroSection = () => {
                   priority
                 />
               </div>
-            </ScrollMotionEffect>
+            </ScrollMotionEffect> */}
 
             <ScrollMotionEffect effect="fade-left" duration="2000">
               <div>
