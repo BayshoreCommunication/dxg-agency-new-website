@@ -31,7 +31,7 @@ const HeroSection = () => {
             <ScrollMotionEffect effect="fade-right" duration="2000">
               <div>
                 <Image
-                  src="/landing-pages/my-event/hero-img.jpg"
+                  src="/landing-pages/my-event/hero-img-1.jpg"
                   alt="hero image"
                   width={820}
                   height={600}
