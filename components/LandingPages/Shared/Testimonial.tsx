@@ -5,7 +5,7 @@ import React from "react";
 import HomeLogoLoop from "./HomeLogoLoop";
 
 const infos = {
-  title: " We have been trusted to support some amazing brands",
+  title: " We Have Been Trusted To Support Some Amazing Brands",
   description: `The organizations below trusted DXG's expertise, precise execution, and proactive collaboration to elevate their event experience.`,
 };
 
