@@ -35,6 +35,7 @@ const HeroSection = () => {
                   alt="hero image"
                   width={820}
                   height={600}
+                  className="w-full"
                 ></Image>
               </div>
             </ScrollMotionEffect>
