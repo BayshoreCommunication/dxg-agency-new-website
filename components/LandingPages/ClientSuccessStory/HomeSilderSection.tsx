@@ -42,22 +42,26 @@ const HomeSilderSection: React.FC = () => {
           {[1, 2, 3, 4, 5].map((el, index) => (
             <SwiperSlide key={index}>
               <div className="">
-                <h2 className=" text-2xl uppercase text-white md:text-4xl lg:text-6xl">
-                  OUR CLIENT <br />
-                  <span className="text-[#2DC6F5]">BEAUTIFUL</span> <br />
-                  EVENT
+                <h2 className=" text-2xl uppercase text-white md:text-4xl lg:text-5xl xl:text-6xl">
+                  It’s More Than An Event, It’s an Experience
                 </h2>
                 <p className="mt-4 text-base font-normal text-white opacity-70 md:text-xl">
-                  Our planning process is thorough and collaborative, involving
-                  state-of-the-art technology and innovative solutions to meet
-                  and exceed your expectations. With us, you are not just
-                  hosting an event but crafting an experience.
+                  {`At DXG, we combine the expertise and experience of our people
+                  with innovative solutions that deliver more than just an event
+                  but an experience. This combined formula allows your attendees
+                  to engage with your content and their colleagues, leaving
+                  lasting impressions. From clear audio to dynamic lighting and
+                  captivating visuals, every detail is engineered to engage your
+                  audience and elevate your message. Our team partners with you
+                  from concept to execution to ensure your event isn't just seen
+                  and heard but felt. When people remember how an event made
+                  them feel, they return and tell others about their experience`}
                 </p>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="mt-10 flex items-center gap-x-10">
+        {/* <div className="mt-10 flex items-center gap-x-10">
           <button
             ref={prevButtonRef}
             className="cursor-pointer bg-[#2D2D2D] p-4 text-white duration-300 hover:bg-[#2DC6F5] hover:text-black"
@@ -70,7 +74,7 @@ const HomeSilderSection: React.FC = () => {
           >
             <IoArrowForwardOutline className="text-2xl" />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

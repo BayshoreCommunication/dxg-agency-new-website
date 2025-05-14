@@ -26,7 +26,7 @@ const iconVariants = {
 
 export default function Services() {
   return (
-    <div className="bg-black py-3 md:py-10">
+    <div className="bg-black md:py-10 py-6 lg:py-20">
       <MaxWidthWrapper>
         <MotionDiv
           variants={staggerContainer(0.2, 0.1)}
@@ -34,7 +34,7 @@ export default function Services() {
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
         >
-          <div className="flex flex-col  items-center py-10">
+          <div className="flex flex-col  items-center pb-10">
             <Title text={infos.title} />
             <Paragraph
               className="text-center md:max-w-4xl"
@@ -43,12 +43,6 @@ export default function Services() {
             />
           </div>
           <div>
-            <div className="flex flex-col  items-center">
-              <h3 className="mb-4 lg:mb-8 text-4xl font-bold leading-10 text-white">
-                <span className="border-b border-b-brand text-brand">Core</span>
-                 Service
-              </h3>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 xl:gap-6">
               {SERVICE_DATA.map((item, index) => {
                 return (

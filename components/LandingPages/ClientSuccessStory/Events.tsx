@@ -14,7 +14,7 @@ import ScrollMotionEffect from "../Shared/motion/ScrollMotionEffect";
 
 const Events = () => {
   return (
-    <div className="bg-[#111617] py-8 md:py-10 lg:py-20">
+    <div className="bg-[#111617] pt-8 md:pt-10 lg:pt-20">
       <MaxWidthWrapper>
         {/*================ Mobile ========*/}
         <div className="block lg:hidden">

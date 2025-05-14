@@ -237,7 +237,7 @@ const ContactSection = () => {
         <div className="mb-5">
           <input
             className="block w-full rounded-md border border-gray-700 bg-gray-900 p-2.5 py-2.5 pl-5 text-lg text-gray-300 placeholder:text-base focus:border-black focus:ring-black"
-            placeholder="Put email address"
+            placeholder="Email address"
             required
             autoComplete="off"
             type="email"

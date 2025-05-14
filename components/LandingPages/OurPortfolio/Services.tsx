@@ -488,12 +488,12 @@ export default function Services() {
             />
           </div>
           <div>
-            <div className="flex flex-col  items-center">
+            {/* <div className="flex flex-col  items-center">
               <h3 className="mb-4 lg:mb-8 text-4xl font-bold leading-10 text-white">
                 <span className="border-b border-b-brand text-brand">Core</span>
                  Service
               </h3>
-            </div>
+            </div> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 xl:gap-6">
               {SERVICE_DATA.map((item, index) => {
                 return (
