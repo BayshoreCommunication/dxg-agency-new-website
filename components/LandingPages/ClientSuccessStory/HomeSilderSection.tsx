@@ -10,45 +10,22 @@ import "swiper/css/pagination";
 import { IoArrowBack, IoArrowForwardOutline } from "react-icons/io5";
 
 const HomeSilderSection: React.FC = () => {
-  // Refs for navigation buttons
-  const prevButtonRef = useRef<HTMLButtonElement | null>(null);
-  const nextButtonRef = useRef<HTMLButtonElement | null>(null);
-  const swiperRef = useRef<any>(null);
-
-  useEffect(() => {
-    if (swiperRef.current) {
-      // Attach the navigation buttons to Swiper when it’s initialized
-      swiperRef.current.params.navigation.prevEl = prevButtonRef.current;
-      swiperRef.current.params.navigation.nextEl = nextButtonRef.current;
-      swiperRef.current.navigation.init();
-      swiperRef.current.navigation.update();
-    }
-  }, []);
-
   return (
     <div className="">
       <div className="">
-        <Swiper
-          cssMode={true}
-          mousewheel={true}
-          keyboard={true}
-          loop={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          onBeforeInit={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          className="mySwiper"
-        >
-          {[1, 2, 3, 4, 5].map((el, index) => (
-            <SwiperSlide key={index}>
-              <div className="">
-                <h2 className=" text-2xl uppercase text-white md:text-3xl lg:text-4xl 2xl:text-6xl">
-                  It’s More Than An{" "}
-                  <span className="text-[#2DC6F5]">Event</span>, It’s an
-                  Experience
-                </h2>
-                <p className="mt-4 text-base font-normal text-white opacity-70 2xl:text-lg ">
-                  {`At DXG, we combine the expertise and experience of our people
+        <div className="">
+          <h2 className=" text-2xl uppercase text-white md:text-3xl lg:text-3xl 2xl:text-6xl hidden lg:block">
+            It’s More Than An <br />
+            <span className="text-[#2DC6F5] ">Event , It’s an</span> <br />
+            Experience
+          </h2>
+          <h2 className=" text-2xl uppercase text-white md:text-3xl lg:text-4xl 2xl:text-6xl lg:hidden">
+            It’s More Than An
+            <span className="text-[#2DC6F5] pr-3">Event , It’s an</span>
+            Experience
+          </h2>
+          <p className="mt-4 lg:mt-5 text-base lg:text-sm xl:text-base font-normal text-white opacity-70  ">
+            {`At DXG, we combine the expertise and experience of our people
                   with innovative solutions that deliver more than just an event
                   but an experience. This combined formula allows your attendees
                   to engage with your content and their colleagues, leaving
@@ -58,11 +35,9 @@ const HomeSilderSection: React.FC = () => {
                   from concept to execution to ensure your event isn't just seen
                   and heard but felt. When people remember how an event made
                   them feel, they return and tell others about their experience`}
-                </p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          </p>
+        </div>
+
         {/* <div className="mt-10 flex items-center gap-x-10">
           <button
             ref={prevButtonRef}

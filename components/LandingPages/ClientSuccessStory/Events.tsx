@@ -83,7 +83,7 @@ const Events = () => {
                 </ScrollMotionEffect>
               </div> */}
 
-              <div className="absolute  right-20 top-1/2 z-20  max-w-3xl -translate-y-1/2 transform">
+              <div className="absolute right-5 xl:right-20 top-1/2 z-20  lg:max-w-[590px]  xl:max-w-2xl -translate-y-1/2 transform">
                 <ScrollMotionEffect effect="fade-left" duration="2000">
                   {" "}
                   <HomeSilderSection />
