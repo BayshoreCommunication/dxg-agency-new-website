@@ -21,7 +21,7 @@ const HomeSilderSection: React.FC = () => {
           </h2>
           <h2 className=" text-2xl uppercase text-white md:text-3xl lg:text-4xl 2xl:text-6xl lg:hidden">
             It’s More Than An
-            <span className="text-[#2DC6F5] pr-3">Event , It’s an</span>
+            <span className="text-[#2DC6F5] pr-3">Event, It’s An</span>
             Experience
           </h2>
           <p className="mt-4 lg:mt-5 text-base lg:text-sm xl:text-base font-normal text-white opacity-70  ">
