@@ -42,10 +42,12 @@ const HomeSilderSection: React.FC = () => {
           {[1, 2, 3, 4, 5].map((el, index) => (
             <SwiperSlide key={index}>
               <div className="">
-                <h2 className=" text-2xl uppercase text-white md:text-4xl lg:text-5xl xl:text-6xl">
-                  It’s More Than An Event, It’s an Experience
+                <h2 className=" text-2xl uppercase text-white md:text-3xl lg:text-4xl 2xl:text-6xl">
+                  It’s More Than An{" "}
+                  <span className="text-[#2DC6F5]">Event</span>, It’s an
+                  Experience
                 </h2>
-                <p className="mt-4 text-base font-normal text-white opacity-70 md:text-xl">
+                <p className="mt-4 text-base font-normal text-white opacity-70 2xl:text-lg ">
                   {`At DXG, we combine the expertise and experience of our people
                   with innovative solutions that deliver more than just an event
                   but an experience. This combined formula allows your attendees

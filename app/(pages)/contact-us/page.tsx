@@ -19,7 +19,7 @@ export default async function Contact() {
             <div>
               <div className="mt-2 flex lg:justify-center">
                 <p className=" text-14 leading-24 font-semibold text-white">
-                  Digital Experience Group (DXG) is an audiovisual production
+                  Digital Xperience Group (DXG) is an audiovisual production
                   agency specializing in making events simple for its partners
                   while being fun and memorable for its attendees.
                 </p>

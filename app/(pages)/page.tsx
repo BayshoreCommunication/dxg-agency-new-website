@@ -1,8 +1,10 @@
+import Services from "@/components/LandingPages/MyEvent/Services";
+import Testimonial from "@/components/LandingPages/Shared/Testimonial";
 import NewsLetter from "@/components/NewsLetter";
 import { BannerSection } from "@/components/Sections";
-import Testimonial from "@/components/Testimonial";
+// import Testimonial from "@/components/Testimonial";
 //import Overview from "@/components/home/Overview";
-import Services from "@/components/home/Services";
+// import Services from "@/components/home/Services";
 import WeAre from "@/components/home/WeAre";
 import WeSupport from "@/components/home/WeSupport";
 import WhyDxg from "@/components/home/WhyDxg";
