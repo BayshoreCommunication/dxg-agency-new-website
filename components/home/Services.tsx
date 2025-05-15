@@ -51,7 +51,7 @@ export default function Services() {
               </Button>
             </BottomToTop>
           </div>
-          <div className="flex flex-col md:flex-row">
+          {/* <div className="flex flex-col md:flex-row">
             {SERVICE_DATA.map((item, index) => {
               return (
                 <MotionDiv
@@ -127,6 +127,92 @@ export default function Services() {
                 </MotionDiv>
               );
             })}
+          </div> */}
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 xl:gap-6">
+              {SERVICE_DATA.map((item, index) => {
+                return (
+                  // <MotionDiv
+                  //   variants={fadeIn("right", "tween", index * 0.2, 0.75)}
+                  //   key={index}
+                  //   className={`min-h-[200px] flex-1 justify-center overflow-hidden border border-gray-400 bg-cover bg-center bg-no-repeat md:min-h-[420px]`}
+                  //   style={{ backgroundImage: `url('${item.image}')` }}
+                  // ></MotionDiv>
+
+                  <div
+                    key={index}
+                    className="min-h-[300px] 2xl:min-h-[400px]  flex-1 justify-center overflow-hidden   bg-cover bg-center bg-no-repeat  rounded-xl duration-500 md:rounded-[35px]"
+                    style={{ backgroundImage: `url('${item.image}')` }}
+                  >
+                    <Link href={`${item.url}`}>
+                      <div className="group relative h-full w-full bg-black bg-opacity-50 transition duration-300 hover:bg-sky-700 hover:bg-opacity-80">
+                        {/* Before Hover */}
+                        <div className="absolute inset-0 z-10 flex h-full w-full items-end justify-between px-6 py-6 xl:px-10 xl:py-10 group-hover:hidden ">
+                          <div className="flex items-center justify-between gap-2 w-full">
+                            <div>
+                              {item.heading.split(";").map((word, idx) => (
+                                <h2
+                                  key={idx}
+                                  className="font-semibold  md:text-xl 2xl:text-2xl uppercase text-white"
+                                >
+                                  {word}
+                                </h2>
+                              ))}
+                            </div>
+                            <div className="flex justify-center">
+                              <Icons.customArrowUp className="h-14 w-14  text-white" />
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* On Hover */}
+                        <MotionDiv
+                          transition={{
+                            duration: 0.4,
+                            delay,
+                            type: "easeInOut",
+                            staggerChildren: 0.5,
+                            staggerDirection: -1,
+                          }}
+                          className="absolute inset-0 z-20 hidden h-full w-full flex-col p-6 lg:p-10 group-hover:flex items-end"
+                        >
+                          <MotionDiv className=" h-full">
+                            <h2 className="font-semibold  md:text-xl 2xl:text-2xl uppercase text-white">
+                              {item.title}
+                            </h2>
+                            <p
+                              className="mt-3 text-base text-white"
+                              style={{
+                                wordWrap: "break-word",
+                                overflow: "hidden",
+                                whiteSpace: "normal",
+                                textOverflow: "ellipsis",
+                                display: "-webkit-box",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 15,
+                                lineHeight: "18px",
+                                textAlign: "left",
+                              }}
+                            >
+                              {item.excerpt}
+                            </p>
+                          </MotionDiv>
+                          <MotionDiv
+                            className="flex justify-center pt-4"
+                            initial="hidden"
+                            animate="visible"
+                            variants={iconVariants}
+                            transition={{ duration: 0.5 }}
+                          >
+                            <Icons.customRightArrow className="h-14 w-14 duration-500 text-white" />
+                          </MotionDiv>
+                        </MotionDiv>
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </MotionDiv>
       </MaxWidthWrapper>

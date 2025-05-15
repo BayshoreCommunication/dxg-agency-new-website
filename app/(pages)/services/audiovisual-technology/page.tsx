@@ -1,5 +1,5 @@
 import GetAQoute from "@/components/GetAQuote";
-import Testimonial from "@/components/Testimonial";
+import Testimonial from "@/components/LandingPages/Shared/Testimonial";
 import WhyDxg from "@/components/home/WhyDxg";
 import { AudiovisualTechnologyBannerSection } from "@/components/Sections/AudiovisualTechnologyBannerSection";
 

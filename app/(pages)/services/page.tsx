@@ -1,6 +1,6 @@
 import { BreadCrumb } from "@/components/Breadcrumb";
 import React from "react";
-import Testimonial from "@/components/Testimonial";
+import Testimonial from "@/components/LandingPages/Shared/Testimonial";
 import NewsLetter from "@/components/NewsLetter";
 import { SERVICES_PAGE_DATA } from "@/config/data";
 import { ServiceCard } from "@/components/ServiceCard";

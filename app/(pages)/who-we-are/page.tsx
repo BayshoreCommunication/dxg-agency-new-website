@@ -1,6 +1,6 @@
 import { BreadCrumb } from "@/components/Breadcrumb";
 import React from "react";
-import Testimonial from "@/components/Testimonial";
+import Testimonial from "@/components/LandingPages/Shared/Testimonial";
 import NewsLetter from "@/components/NewsLetter";
 import Image from "next/image";
 import WhoWeAreBanner from "@/public/who-we-are/who-we-are-banner.jpg";
