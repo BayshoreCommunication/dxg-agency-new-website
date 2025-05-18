@@ -22,6 +22,10 @@ export const SITECONFIG = {
       slug: '/services',
     },
     {
+      title: 'Portfolio',
+      slug: '/portfolio',
+    },
+    {
       title: 'Why DXG',
       slug: '/why-dxg',
     },
