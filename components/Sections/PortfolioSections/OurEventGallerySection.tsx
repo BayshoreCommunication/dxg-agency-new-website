@@ -20,7 +20,7 @@ const iconVariants = {
   visible: { x: 0, opacity: 1 },
 };
 
-const EventGalleryData = Array.from({ length: 96 }, (_, i) => ({
+const EventGalleryData = Array.from({ length: 12 }, (_, i) => ({
   id: i + 1,
   img: `/landing-pages/our-portfolio/event-${i + 1}.jpg`,
 }));
