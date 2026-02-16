@@ -1,6 +1,6 @@
-const postData = fetch("https://backend-dxgwebsite.vercel.app/site/blog", {
-  cache: "force-cache",
-  next: { revalidate: 5 },
-}).then((res) => res.json());
+import GetAllBlogPost from "@/lib/GetAllBlogPost";
+
+// Fetch all blog posts once (without pagination for full dataset)
+const postData = GetAllBlogPost();
 
 export default postData;
