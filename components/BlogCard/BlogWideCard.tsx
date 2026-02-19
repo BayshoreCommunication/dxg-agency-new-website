@@ -1,14 +1,9 @@
 "use client";
-import Image from "next/image";
-import { Button } from "../ui/button";
 import parse from "html-react-parser";
-import GetAllBlogPost from "@/lib/GetAllBlogPost";
-import { MotionDiv } from "../Motion";
-import { fadeIn } from "@/lib/motion";
+import Image from "next/image";
 import Link from "next/link";
-import { Suspense, useEffect, useMemo, useState } from "react";
-import React from "react";
-import MotionEffect from "../Animation/MotionEffect";
+import { useEffect, useState } from "react";
+import { Button } from "../ui/button";
 // interface BlogBigImageCardProps {
 //   title: string;
 //   featuredImage: string;
@@ -88,7 +83,7 @@ const BlogWideCard = ({
   else
     return (
       blogsData && (
-        <MotionEffect effect="fade-up" duration={2000}>
+        
           <div className={" " + className}>
             {blogsData
               ?.filter((blog: any) => blog?.published === true)
@@ -144,7 +139,7 @@ const BlogWideCard = ({
                 );
               })}
           </div>
-        </MotionEffect>
+       
       )
     );
 };

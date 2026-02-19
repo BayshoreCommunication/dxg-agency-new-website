@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, useState, Suspense } from "react";
 import { BlogBigImageCard } from "@/components/BlogCard";
+import BlogWideCard from "@/components/BlogCard/BlogWideCard";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { MotionDiv } from "@/components/Motion";
 import { RECENT_BLOG_POST } from "@/config/data";
 import { fadeIn, slideIn, staggerContainer } from "@/lib/motion";
-import BlogWideCard from "@/components/BlogCard/BlogWideCard";
+import { Suspense, useEffect, useState } from "react";
 
 type Post = {
   id: number;
